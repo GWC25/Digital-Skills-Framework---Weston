@@ -1,268 +1,522 @@
 {
-  "version": "3.0",
+  "version": "3.1",
   "lastUpdated": "2026-04-28T00:00:00Z",
+  "title": "Digital Skills Framework — Weston College (Full Curriculum Edition)",
+  
+  "tab1_generalSkills": {
+    "eyebrow": "Tab 01 of 08",
+    "title": "General Digital Skills",
+    "intro": "Drawn from the DfE Essential Digital Skills Framework and the FutureDotNow AI-updated EDS (2025), these skills are organised across three contexts: learning, work, and societal inclusion. The five core EDS categories — Communicating, Handling Information & Content, Transacting, Problem Solving, and Being Safe & Legal Online — cut across all three contexts.",
+    "infoBox": "Why this matters at Weston College: The EIF Toolkit explicitly states that learners must develop \"the digital skills needed to study curriculum and learning goals.\" These 15 foundational skills represent the floor — the minimum every learner should reach regardless of their programme.",
+    "columns": [
+      {
+        "title": "For Learning",
+        "icon": "📚",
+        "skills": [
+          {
+            "number": "01",
+            "name": "Navigating Digital Platforms",
+            "description": "Using VLEs, Teams, SharePoint; accessing learning resources and timetables online."
+          },
+          {
+            "number": "02",
+            "name": "Research & Information Literacy",
+            "description": "Searching effectively, evaluating sources, avoiding misinformation and AI-generated errors."
+          },
+          {
+            "number": "03",
+            "name": "Digital Note-taking & Organisation",
+            "description": "OneNote, cloud documents, folder structures, and version control for assignments."
+          },
+          {
+            "number": "04",
+            "name": "Collaborative Digital Working",
+            "description": "Shared documents, group tasks in Teams or Google Workspace, peer review online."
+          },
+          {
+            "number": "05",
+            "name": "AI-Assisted Learning",
+            "description": "Using AI tools ethically for research, drafting and self-quizzing without plagiarism."
+          }
+        ]
+      },
+      {
+        "title": "For the World of Work",
+        "icon": "💼",
+        "skills": [
+          {
+            "number": "01",
+            "name": "Professional Communication",
+            "description": "Email etiquette, Teams/Zoom calls, digital messaging in workplace contexts."
+          },
+          {
+            "number": "02",
+            "name": "Productivity & Office Applications",
+            "description": "Word processing, spreadsheets, presentations and scheduling tools (Microsoft/Google)."
+          },
+          {
+            "number": "03",
+            "name": "Digital Transactions & Invoicing",
+            "description": "Online payments, basic invoicing apps, managing work-related digital finances."
+          },
+          {
+            "number": "04",
+            "name": "Data Handling & Record-Keeping",
+            "description": "Entering, checking and interpreting workplace data; compliant digital record-keeping."
+          },
+          {
+            "number": "05",
+            "name": "AI Literacy for the Workplace",
+            "description": "Using AI assistants, understanding outputs critically, prompt skills and ethical use."
+          }
+        ]
+      },
+      {
+        "title": "For Societal Inclusion",
+        "icon": "🌐",
+        "skills": [
+          {
+            "number": "01",
+            "name": "Accessing Public & Government Services",
+            "description": "HMRC, Universal Credit, NHS booking, local council portals and digital identity."
+          },
+          {
+            "number": "02",
+            "name": "Online Safety & Privacy",
+            "description": "Password management, recognising scams, two-factor authentication, GDPR basics."
+          },
+          {
+            "number": "03",
+            "name": "Digital Financial Inclusion",
+            "description": "Online banking, comparing services, avoiding fraud, energy switching portals."
+          },
+          {
+            "number": "04",
+            "name": "Critical Engagement with Media",
+            "description": "Identifying misinformation, understanding algorithmic bias, responsible social media use."
+          },
+          {
+            "number": "05",
+            "name": "Digital Wellbeing & Accessibility",
+            "description": "Screen time awareness, assistive technology, designing/using accessible digital content."
+          }
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "title": "DfE Essential Digital Skills Framework",
+        "url": "https://www.gov.uk/government/publications/essential-digital-skills-framework",
+        "description": "Government · 5 core categories · Life & Work standards"
+      },
+      {
+        "title": "FutureDotNow — AI-Updated EDS Framework 2025",
+        "url": "https://futuredotnow.uk/about-us/the-essential-digital-skills-framework/",
+        "description": "Adds AI literacy, prompt engineering & ethical AI use"
+      },
+      {
+        "title": "Ipsos / Lloyds Banking Essential Digital Skills 2024",
+        "url": "https://www.ipsos.com/en-uk/essential-digital-skills-work-2024",
+        "description": "Annual tracking of UK workforce digital capability"
+      },
+      {
+        "title": "Good Things Foundation — Basic Digital Skills Briefing",
+        "url": "https://www.goodthingsfoundation.org/policy-and-research/what-works-colab/basic-digital-skills-briefing",
+        "description": "Inclusion, exclusion gaps, community-level context"
+      }
+    ]
+  },
+
+  "tab4_framing": {
+    "eyebrow": "Tab 04 of 08",
+    "title": "Framing Digital Skills for Industry Needs",
+    "intro": "How digital skills are framed determines whether staff and learners engage or disengage. The most effective framing connects directly to an industry outcome learners already care about.",
+    "principles": "Never teach the technology. Teach the task that technology enables. A construction learner doesn't need to learn 'how to use an app.' They need to clock in, submit a site diary, order materials, and read a drawing. The apps are just how they do it.",
+    "frames": [
+      {
+        "number": "1",
+        "title": "The Industry Standard Frame",
+        "description": "Frame digital skills as standard professional practice — not technology training, but what every employer expects on day one.",
+        "example": "Construction: \"Every major contractor uses digital clock-in. You won't get paid if you can't sign in on site digitally.\"\nEngineering: \"EV diagnostics are entirely digital — you can't fix a modern vehicle without a tablet.\""
+      },
+      {
+        "number": "2",
+        "title": "The Time-Saving Frame",
+        "description": "Frame digital tools as reducing admin burden for tasks learners will have to do anyway — invoicing, booking, recording, communicating.",
+        "example": "Hair & Beauty: \"Fresha sends reminders automatically and takes deposits. You spend less time chasing no-shows.\"\nHealth & Care: \"Electronic records mean you don't rewrite the same patient information by hand three times a shift.\""
+      },
+      {
+        "number": "3",
+        "title": "The Employability & Earnings Frame",
+        "description": "Link digital competence directly to higher pay, better job prospects, or self-employment viability.",
+        "example": "Business: \"Xero certification adds £3-5k to your starting salary as a bookkeeper.\"\nPerforming Arts: \"Casting directors now expect digital self-tapes. You won't get seen without knowing how to film and upload professionally.\""
+      },
+      {
+        "number": "4",
+        "title": "The Authentic Context Frame",
+        "description": "Teach digital skills inside real vocational tasks rather than as separate lessons. The digital skill becomes invisible — the learner is just doing their job.",
+        "example": "Construction: \"Measure this wall, log the data, and email it to the project manager.\" — learner has just done data entry, file handling, and email in one task.\nESol: \"Book a GP appointment on the NHS app.\" — learner is navigating a real digital service, not a classroom simulation."
+      }
+    ]
+  },
+
+  "tab6_progression": {
+    "eyebrow": "Tab 06 of 08",
+    "title": "Digital Skills Progression — Basic to Advanced",
+    "intro": "Two parallel ladders showing progression from absolute beginner to highly advanced — one for General Digital Skills (applicable to all citizens and learners) and one for IT & Computing Skills specific to FE & HE contexts. Both are structured using the DigComp 3.0 proficiency levels (European Commission, November 2025).",
+    "ladders": [
+      {
+        "name": "General Digital Skills",
+        "subtitle": "For all citizens, learners & employees · Based on DfE EDS Framework & DigComp 3.0",
+        "levels": [
+          {
+            "level": "Foundation",
+            "skills": [
+              {
+                "title": "Switching on & basic navigation",
+                "description": "Can switch on a device, use a mouse or touchscreen, open an app or browser. Needs guidance for most tasks."
+              },
+              {
+                "title": "Recognising common icons & interfaces",
+                "description": "Identifies common icons (Wi-Fi, battery, settings). Can locate and tap familiar apps used regularly."
+              },
+              {
+                "title": "Basic internet browsing",
+                "description": "Can open a browser and type a URL or search term. May not distinguish between a search result and an advertisement."
+              },
+              {
+                "title": "Sending and receiving basic messages",
+                "description": "Can send a text message or WhatsApp. Struggles with email attachments or creating a new contact from scratch."
+              }
+            ]
+          },
+          {
+            "level": "Basic",
+            "skills": [
+              {
+                "title": "Email — composing, replying, attaching",
+                "description": "Can write, send, reply and forward emails. Can attach a document. Knows not to open suspicious attachments."
+              },
+              {
+                "title": "Searching effectively online",
+                "description": "Uses search engines with specific terms. Can open multiple tabs, bookmark pages, and navigate back."
+              },
+              {
+                "title": "Creating simple documents",
+                "description": "Can open Word or Google Docs, type, edit, and save. Applies basic formatting (bold, font size, bullet lists)."
+              },
+              {
+                "title": "Basic online transactions",
+                "description": "Can shop online, fill in a digital form, and create an account. Understands passwords and uses one for accounts."
+              },
+              {
+                "title": "Accessing public digital services",
+                "description": "Can navigate gov.uk, book a GP appointment online, or use the NHS App."
+              }
+            ]
+          },
+          {
+            "level": "Intermediate",
+            "skills": [
+              {
+                "title": "Productive use of office applications",
+                "description": "Uses Word, Excel (basic formulae, sorting, simple charts), and PowerPoint confidently. Creates structured documents with headings."
+              },
+              {
+                "title": "Video calling and digital collaboration",
+                "description": "Joins and hosts video calls (Teams, Zoom). Uses shared documents simultaneously with others. Manages files across folders and cloud storage independently."
+              },
+              {
+                "title": "Online safety — active practice",
+                "description": "Uses unique strong passwords and a password manager. Recognises phishing emails. Enables two-factor authentication."
+              },
+              {
+                "title": "Evaluating digital information critically",
+                "description": "Checks publication dates, author credentials, and cross-references sources. Recognises misinformation patterns."
+              },
+              {
+                "title": "Creating and sharing digital content",
+                "description": "Produces presentations, short videos, infographics, or social posts for a defined purpose. Understands copyright and Creative Commons basics."
+              },
+              {
+                "title": "Basic AI tool use",
+                "description": "Can use AI assistants (ChatGPT, Copilot) to draft text, summarise documents, or answer questions. Knows to verify AI outputs."
+              }
+            ]
+          },
+          {
+            "level": "Advanced",
+            "skills": [
+              {
+                "title": "Advanced data management & analysis",
+                "description": "Uses Excel pivot tables, VLOOKUP, and IF statements. Can build basic Power BI dashboards. Manages datasets, cleans data, and produces evidence-based reports."
+              },
+              {
+                "title": "Digital project management",
+                "description": "Uses project management tools (Planner, Trello, Asana). Manages workflows, assigns tasks digitally, tracks progress, and reports on outcomes."
+              },
+              {
+                "title": "AI as a working tool",
+                "description": "Uses AI strategically to accelerate work — writing, research, summarising, coding. Evaluates AI outputs critically."
+              },
+              {
+                "title": "Digital communication strategy",
+                "description": "Manages professional digital presence (LinkedIn). Uses digital channels strategically for audience-appropriate communication."
+              },
+              {
+                "title": "Cybersecurity — personal and organisational",
+                "description": "Understands GDPR obligations. Recognises social engineering attacks. Manages security settings across devices and platforms."
+              }
+            ]
+          },
+          {
+            "level": "Highly Advanced",
+            "skills": [
+              {
+                "title": "Strategic digital leadership",
+                "description": "Shapes digital culture, policy or strategy at organisational or sector level. Advocates for digital inclusion and accessibility."
+              },
+              {
+                "title": "Building and automating digital workflows",
+                "description": "Uses low-code / no-code tools (Power Automate, Zapier) to automate routine tasks. Creates systems others rely on."
+              },
+              {
+                "title": "Advanced AI and digital innovation",
+                "description": "Identifies novel applications of AI and digital tools in their field. Builds custom GPTs or AI workflows."
+              },
+              {
+                "title": "Digital rights, ethics and advocacy",
+                "description": "Understands societal implications of digital technology — algorithmic bias, data sovereignty, digital rights."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+
+  "tab7_teacherSkills": {
+    "eyebrow": "Tab 07 of 08",
+    "title": "Teacher Digital Skills (TLA-Focused Progression)",
+    "intro": "A structured progression framework for FE & HE teaching staff — from first engaging with technology in the classroom to leading digital innovation across the college.",
+    "stages": [
+      {
+        "stageNumber": 1,
+        "stageName": "Exploring Digital Teaching",
+        "digcompLevel": "DigCompEdu A1–A2",
+        "audience": "Newly appointed staff · Career changers · Low-confidence digital users",
+        "skills": [
+          {
+            "number": "1.1",
+            "name": "Accessing and using the VLE / LMS",
+            "area": "Professional Engagement",
+            "description": "Can log into the college VLE, view existing course content, and upload a simple resource. Understands how learners access the same space."
+          },
+          {
+            "number": "1.2",
+            "name": "Using Microsoft Teams for communication",
+            "area": "Digital Communication",
+            "description": "Can join a Teams meeting, post to a channel, share a file, and message a learner or colleague."
+          },
+          {
+            "number": "1.3",
+            "name": "Creating basic digital presentations",
+            "area": "Digital Resources",
+            "description": "Produces PowerPoint slides with text and images for classroom use. Understands the difference between a slide deck used in class and one shared with learners online."
+          },
+          {
+            "number": "1.4",
+            "name": "Submitting admin data digitally",
+            "area": "Professional Engagement",
+            "description": "Can complete register, funding, and compliance forms on college MIS systems. Submits data accurately and understands GDPR basics."
+          },
+          {
+            "number": "1.5",
+            "name": "Aware of digital tools available in the college",
+            "area": "Digital Awareness",
+            "description": "Has attended an overview of the college's key digital tools. Knows which tools are available and approved."
+          }
+        ]
+      },
+      {
+        "stageNumber": "2A",
+        "stageName": "Adopting — Developing Digital Practice",
+        "digcompLevel": "DigCompEdu B1 (Integrator)",
+        "audience": "Staff with 1–2 years experience · Those completing or post-ITE",
+        "skills": [
+          {
+            "number": "2.1",
+            "name": "Structuring an active VLE course space",
+            "area": "Digital Resources",
+            "description": "Has built a well-organised VLE course with clear sections, resources for each topic, and learner-facing instructions. Learners can independently navigate the space."
+          },
+          {
+            "number": "2.2",
+            "name": "Using Teams for active learner engagement",
+            "area": "Teaching & Learning",
+            "description": "Uses Teams channels for ongoing learner discussion, Q&A, and feedback. Sets Teams assignments with rubrics and due dates. Uses breakout rooms for small-group work."
+          },
+          {
+            "number": "2.3",
+            "name": "Formative digital assessment",
+            "area": "Assessment",
+            "description": "Uses digital tools for formative assessment — Microsoft Forms quizzes, Mentimeter, Kahoot, or Padlet for checking understanding within lessons."
+          },
+          {
+            "number": "2.4",
+            "name": "Creating accessible digital resources",
+            "area": "Accessibility & Inclusion",
+            "description": "Applies accessibility principles to all digital materials — readable fonts, sufficient colour contrast, alt-text on images, headings in Word documents. Uses Microsoft Office's Accessibility Checker."
+          },
+          {
+            "number": "2.5",
+            "name": "Using data from college systems to inform teaching",
+            "area": "Data-Informed Practice",
+            "description": "Reviews attendance, attainment, and target data from ProMonitor. Identifies at-risk learners digitally and records intervention."
+          },
+          {
+            "number": "2.6",
+            "name": "Ethical AI awareness in TLA",
+            "area": "AI Literacy",
+            "description": "Understands how learners are using AI tools (ChatGPT, Copilot) in their work. Has a position on AI in assessment. Can identify likely AI-generated content."
+          }
+        ]
+      },
+      {
+        "stageNumber": "2B",
+        "stageName": "Adopting — Embedding & Expanding",
+        "digcompLevel": "DigCompEdu B2 (Expert)",
+        "audience": "Confident practitioners · Those seeking ATS status · Staff mentoring newer colleagues",
+        "skills": [
+          {
+            "number": "2B.1",
+            "name": "Technology-enhanced active learning design",
+            "area": "Pedagogical Innovation",
+            "description": "Designs lesson sequences where digital tools purposefully change the learning experience — enabling collaboration, problem-solving, or creative production. Applies frameworks like 21CLD or UDL."
+          },
+          {
+            "number": "2B.2",
+            "name": "Digital differentiation",
+            "area": "Learner Support",
+            "description": "Uses digital tools to personalise learning at scale — adaptive quiz tools, choice boards created digitally, differentiated resources shared via the VLE for different ability groups."
+          },
+          {
+            "number": "2B.3",
+            "name": "Producing and editing digital media for teaching",
+            "area": "Digital Content Creation",
+            "description": "Produces screencasts (Loom, OBS), short instructional videos, or narrated PowerPoints for flipped learning. Captions all video content."
+          },
+          {
+            "number": "2B.4",
+            "name": "Advanced digital assessment and feedback",
+            "area": "Assessment",
+            "description": "Uses Turnitin originality reports and rubrics. Provides audio or video feedback on learner work. Uses digital annotation tools (DocHub, Adobe) on submitted PDFs."
+          },
+          {
+            "number": "2B.5",
+            "name": "AI as a teaching productivity tool",
+            "area": "AI in TLA",
+            "description": "Uses AI tools (Microsoft Copilot, MagicSchool.ai) to draft lesson plans, generate differentiated resources, produce quiz banks, and summarise learner feedback. Critically evaluates AI outputs."
+          },
+          {
+            "number": "2B.6",
+            "name": "Building learners' digital skills in subject context",
+            "area": "Learner Digital Empowerment",
+            "description": "Deliberately plans for learners to develop digital skills within the subject — not as a bolt-on, but embedded in vocational tasks. Maps which EDS framework categories their learners are developing."
+          }
+        ]
+      },
+      {
+        "stageNumber": 3,
+        "stageName": "Leading Digital Teaching Practice",
+        "digcompLevel": "DigCompEdu C1–C2 (Leader → Pioneer)",
+        "audience": "Digital Champions · TLAMs with digital remit · Heads of Area · Those pursuing ATS",
+        "skills": [
+          {
+            "number": "3.1",
+            "name": "Mentoring and coaching digital practice",
+            "area": "Professional Leadership",
+            "description": "Supports and coaches colleagues on digital tools and pedagogy — not just demonstrating but modelling reflective practice. Identifies where a colleague is on the DTPF progression and tailors coaching."
+          },
+          {
+            "number": "3.2",
+            "name": "Designing digital-first curriculum",
+            "area": "Curriculum Design",
+            "description": "Designs entire units or programmes where digital tools are integral to the learning journey. Assessment strategy incorporates digital evidence. Learners build digital skills explicitly mapped to the EDS Framework."
+          },
+          {
+            "number": "3.3",
+            "name": "Critical evaluation and adoption of EdTech",
+            "area": "Strategic Digital Leadership",
+            "description": "Evaluates new educational technology critically — pedagogical rationale, accessibility compliance, data privacy (GDPR), cost, and sustainability. Makes evidence-based recommendations on EdTech adoption."
+          },
+          {
+            "number": "3.4",
+            "name": "AI pedagogy leadership",
+            "area": "AI in Education",
+            "description": "Leads the team's thinking on AI in teaching and assessment — drafts or contributes to the area's AI policy, models ethical AI use, supports colleagues in navigating the AI landscape."
+          },
+          {
+            "number": "3.5",
+            "name": "Digital research and innovation in practice",
+            "area": "Scholarship & Innovation",
+            "description": "Conducts or participates in action research into digital pedagogy. Writes up or presents findings — in team meetings, at sector CPD events, or via publication."
+          },
+          {
+            "number": "3.6",
+            "name": "Systemic digital inclusion advocacy",
+            "area": "Inclusion & Accessibility",
+            "description": "Ensures digital accessibility is embedded at curriculum and resource level across the team. Audits the team's VLE provision for WCAG compliance. Champions assistive technology use for SEND learners."
+          }
+        ]
+      }
+    ]
+  },
+
   "digitalLeads": [
-    {
-      "code": "AGF",
-      "name": "Arts, Graphics & Fashion",
-      "headOfArea": "TBA",
-      "digitalLead": "TBA"
-    },
-    {
-      "code": "GMA",
-      "name": "Games, Media & Animation",
-      "headOfArea": "TBA",
-      "digitalLead": "TBA"
-    },
-    {
-      "code": "PAP",
-      "name": "Performance & Production",
-      "headOfArea": "TBA",
-      "digitalLead": "TBA"
-    },
-    {
-      "code": "BUI",
-      "name": "Building Services (Construction)",
-      "headOfArea": "TBA",
-      "digitalLead": "TBA"
-    },
-    {
-      "code": "CON",
-      "name": "Construction Trades",
-      "headOfArea": "TBA",
-      "digitalLead": "TBA"
-    },
-    {
-      "code": "EFE",
-      "name": "Engineering WBL (Work-based)",
-      "headOfArea": "TBA",
-      "digitalLead": "TBA"
-    },
-    {
-      "code": "EHE",
-      "name": "Engineering Higher Education",
-      "headOfArea": "TBA",
-      "digitalLead": "TBA"
-    },
-    {
-      "code": "EMV",
-      "name": "Engineering & Motor Vehicle",
-      "headOfArea": "TBA",
-      "digitalLead": "TBA"
-    },
-    {
-      "code": "ENG",
-      "name": "Engineering (General / Classroom)",
-      "headOfArea": "TBA",
-      "digitalLead": "TBA"
-    },
-    {
-      "code": "BUS",
-      "name": "Business & Tourism",
-      "headOfArea": "TBA",
-      "digitalLead": "TBA"
-    },
-    {
-      "code": "DCI",
-      "name": "Digital Computing & IT",
-      "headOfArea": "TBA",
-      "digitalLead": "TBA"
-    },
-    {
-      "code": "PRA",
-      "name": "Professional Apprenticeships",
-      "headOfArea": "TBA",
-      "digitalLead": "TBA"
-    },
-    {
-      "code": "PRS",
-      "name": "Professional Studies",
-      "headOfArea": "TBA",
-      "digitalLead": "TBA"
-    },
-    {
-      "code": "EEY",
-      "name": "Education & Early Years",
-      "headOfArea": "TBA",
-      "digitalLead": "TBA"
-    },
-    {
-      "code": "HAC",
-      "name": "Health (inc. T Level)",
-      "headOfArea": "TBA",
-      "digitalLead": "TBA"
-    },
-    {
-      "code": "FEH",
-      "name": "FIP Supported Employment Excellence",
-      "headOfArea": "TBA",
-      "digitalLead": "TBA"
-    },
-    {
-      "code": "EGL",
-      "name": "English",
-      "headOfArea": "TBA",
-      "digitalLead": "TBA"
-    },
-    {
-      "code": "ESO",
-      "name": "ESOL",
-      "headOfArea": "TBA",
-      "digitalLead": "TBA"
-    },
-    {
-      "code": "MAT",
-      "name": "Maths",
-      "headOfArea": "TBA",
-      "digitalLead": "TBA"
-    },
-    {
-      "code": "HBH",
-      "name": "Hair, Beauty & Hospitality",
-      "headOfArea": "TBA",
-      "digitalLead": "TBA"
-    },
-    {
-      "code": "ANM",
-      "name": "Animal Management",
-      "headOfArea": "TBA",
-      "digitalLead": "TBA"
-    },
-    {
-      "code": "SPO",
-      "name": "Sport",
-      "headOfArea": "TBA",
-      "digitalLead": "TBA"
-    },
-    {
-      "code": "PSF",
-      "name": "Public Services (Protective Services)",
-      "headOfArea": "TBA",
-      "digitalLead": "TBA"
-    },
-    {
-      "code": "CED",
-      "name": "Community Education",
-      "headOfArea": "TBA",
-      "digitalLead": "TBA"
-    },
-    {
-      "code": "PRE",
-      "name": "Employment Services (Pre-employment)",
-      "headOfArea": "TBA",
-      "digitalLead": "TBA"
-    },
-    {
-      "code": "SKB",
-      "name": "Skills Bootcamps",
-      "headOfArea": "TBA",
-      "digitalLead": "TBA"
-    },
-    {
-      "code": "SMX",
-      "name": "SOMAX (Offsite / Prison provision)",
-      "headOfArea": "TBA",
-      "digitalLead": "TBA"
-    },
-    {
-      "code": "SMS",
-      "name": "Sixth Form (A Level)",
-      "headOfArea": "TBA",
-      "digitalLead": "TBA"
-    },
-    {
-      "code": "AHE",
-      "name": "Access to Higher Education",
-      "headOfArea": "TBA",
-      "digitalLead": "TBA"
-    },
-    {
-      "code": "FAU",
-      "name": "FIP Autism",
-      "headOfArea": "TBA",
-      "digitalLead": "TBA"
-    },
-    {
-      "code": "FCO",
-      "name": "FIP Complex Needs",
-      "headOfArea": "TBA",
-      "digitalLead": "TBA"
-    },
-    {
-      "code": "FPL",
-      "name": "FIP Pre-Vocational",
-      "headOfArea": "TBA",
-      "digitalLead": "TBA"
-    }
+    {"code": "AGF", "name": "Arts, Graphics & Fashion", "headOfArea": "TBA", "digitalLead": "TBA"},
+    {"code": "GMA", "name": "Games, Media & Animation", "headOfArea": "TBA", "digitalLead": "TBA"},
+    {"code": "PAP", "name": "Performance & Production", "headOfArea": "TBA", "digitalLead": "TBA"},
+    {"code": "BUI", "name": "Building Services (Construction)", "headOfArea": "TBA", "digitalLead": "TBA"},
+    {"code": "CON", "name": "Construction Trades", "headOfArea": "TBA", "digitalLead": "TBA"},
+    {"code": "EFE", "name": "Engineering WBL (Work-based)", "headOfArea": "TBA", "digitalLead": "TBA"},
+    {"code": "EHE", "name": "Engineering Higher Education", "headOfArea": "TBA", "digitalLead": "TBA"},
+    {"code": "EMV", "name": "Engineering & Motor Vehicle", "headOfArea": "TBA", "digitalLead": "TBA"},
+    {"code": "ENG", "name": "Engineering (General / Classroom)", "headOfArea": "TBA", "digitalLead": "TBA"},
+    {"code": "BUS", "name": "Business & Tourism", "headOfArea": "TBA", "digitalLead": "TBA"},
+    {"code": "DCI", "name": "Digital Computing & IT", "headOfArea": "TBA", "digitalLead": "TBA"},
+    {"code": "PRA", "name": "Professional Apprenticeships", "headOfArea": "TBA", "digitalLead": "TBA"},
+    {"code": "PRS", "name": "Professional Studies", "headOfArea": "TBA", "digitalLead": "TBA"},
+    {"code": "EEY", "name": "Education & Early Years", "headOfArea": "TBA", "digitalLead": "TBA"},
+    {"code": "HAC", "name": "Health (inc. T Level)", "headOfArea": "TBA", "digitalLead": "TBA"},
+    {"code": "FEH", "name": "FIP Supported Employment Excellence", "headOfArea": "TBA", "digitalLead": "TBA"},
+    {"code": "EGL", "name": "English", "headOfArea": "TBA", "digitalLead": "TBA"},
+    {"code": "ESO", "name": "ESOL", "headOfArea": "TBA", "digitalLead": "TBA"},
+    {"code": "MAT", "name": "Maths", "headOfArea": "TBA", "digitalLead": "TBA"},
+    {"code": "HBH", "name": "Hair, Beauty & Hospitality", "headOfArea": "TBA", "digitalLead": "TBA"},
+    {"code": "ANM", "name": "Animal Management", "headOfArea": "TBA", "digitalLead": "TBA"},
+    {"code": "SPO", "name": "Sport", "headOfArea": "TBA", "digitalLead": "TBA"},
+    {"code": "PSF", "name": "Public Services (Protective Services)", "headOfArea": "TBA", "digitalLead": "TBA"},
+    {"code": "CED", "name": "Community Education", "headOfArea": "TBA", "digitalLead": "TBA"},
+    {"code": "PRE", "name": "Employment Services (Pre-employment)", "headOfArea": "TBA", "digitalLead": "TBA"},
+    {"code": "SKB", "name": "Skills Bootcamps", "headOfArea": "TBA", "digitalLead": "TBA"},
+    {"code": "SMX", "name": "SOMAX (Offsite / Prison provision)", "headOfArea": "TBA", "digitalLead": "TBA"},
+    {"code": "SMS", "name": "Sixth Form (A Level)", "headOfArea": "TBA", "digitalLead": "TBA"},
+    {"code": "AHE", "name": "Access to Higher Education", "headOfArea": "TBA", "digitalLead": "TBA"},
+    {"code": "FAU", "name": "FIP Autism", "headOfArea": "TBA", "digitalLead": "TBA"},
+    {"code": "FCO", "name": "FIP Complex Needs", "headOfArea": "TBA", "digitalLead": "TBA"},
+    {"code": "FPL", "name": "FIP Pre-Vocational", "headOfArea": "TBA", "digitalLead": "TBA"}
   ],
-  "areas": [
-    {
-      "code": "AGF",
-      "name": "Arts, Graphics & Fashion",
-      "coreDigitalSkills": ["Digital research", "Content creation", "Portfolio development", "Social media presence"],
-      "subjectTools": ["Adobe Creative Suite", "Canva Pro", "CLO 3D / Browzwear", "AI image generation", "Behance"],
-      "feContext": "L1–L3 FE; HND/BA at UCW. Digital portfolio is core evidence."
-    }
-  ],
-  "industrySkills": {
-    "construction": {
-      "title": "Construction & Built Environment",
-      "code": "BUI, CON, ENG, EHE",
-      "skills": [
-        {
-          "name": "BIM & CAD Software",
-          "description": "Revit, AutoCAD — reading, producing and annotating digital drawings. BIM Level 2 is now a UK government procurement requirement."
-        },
-        {
-          "name": "Digital Site Management",
-          "description": "QR clock-in, digital site diaries, H&S reporting apps (Fieldwire, Procore, Site App Pro)."
-        }
-      ]
-    }
-  },
-  "sendProvisions": {
-    "autism": {
-      "title": "Autism (FAU)",
-      "icon": "🔵",
-      "provisions": [
-        "Many autistic learners have strong digital aptitude — leverage this as a strength",
-        "Predictable, consistent digital environments reduce anxiety (consistent Teams layout, clear file naming)",
-        "AAC apps (Proloquo2Go, Grid 3) support communication in digital learning contexts",
-        "Visual schedule apps support session structure and transitions",
-        "Avoid unexpected platform changes without notice",
-        "Sensory considerations — screen brightness, sound alerts in digital tools"
-      ]
-    },
-    "complexNeeds": {
-      "title": "Complex Needs (FCO)",
-      "icon": "🟣",
-      "provisions": [
-        "Eye-gaze technology (Tobii) enables digital access for learners without motor control",
-        "Switch-access devices provide alternative computer interaction",
-        "Clicker / Widgit Online for literacy and communication support",
-        "Sensory interactive digital surfaces for engagement",
-        "Technology is often the primary communication channel — reliability is critical",
-        "Staff training on assistive technology is non-negotiable, not optional"
-      ]
-    },
-    "preVocational": {
-      "title": "Pre-Vocational / FPL",
-      "icon": "🟢",
-      "provisions": [
-        "Basic device operation as a foundation skill for transition to employment",
-        "Taskmaster / visual timetable apps support daily digital routines",
-        "Read&Write (text-to-speech, dictation) reduces writing barriers",
-        "Digital daily living tools: travel apps, banking apps, NHS App",
-        "Simple photo/video for portfolio and communication",
-        "Immersive Reader for accessible reading of digital content"
-      ]
-    }
-  },
+
   "metadata": {
     "totalAreas": 32,
+    "totalTabs": 8,
+    "editableTabs": [2, 3, 5, 8],
+    "readOnlyTabs": [1, 4, 6, 7],
+    "passcodeRequired": "2402",
     "lastEditedBy": "Graeme Wright",
     "lastEditDate": "2026-04-28",
     "syncedToGitHub": true,
-    "accessLevel": "ReadOnly except with passcode 2402"
+    "accessLevel": "ReadOnly except with passcode"
   }
 }
