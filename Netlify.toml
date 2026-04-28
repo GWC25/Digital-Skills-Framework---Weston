@@ -1,0 +1,27 @@
+[build]
+  command = "echo 'Static site - no build step'"
+  publish = "."
+
+[functions]
+  directory = "netlify/functions"
+
+[[edge_functions]]
+  path = "/.netlify/functions/sync-data"
+  function = "sync-data"
+
+[dev]
+  port = 8888
+
+# Environment variable — set this in Netlify UI, NOT here
+# GITHUB_PAT = your_github_personal_access_token
+
+[[headers]]
+  for = "/*.json"
+  [headers.values]
+    Cache-Control = "max-age=0, no-cache, no-store, must-revalidate"
+    Access-Control-Allow-Origin = "*"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
