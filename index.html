@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital Skills Framework — Weston College (Full Curriculum)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Mono:wght@400;500&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1a2744; --navy-mid: #23366b; --teal: #1b9690; --teal-light: #2ab5ae;
+    --gold: #b8922a; --gold-light: #d4a843; --cream: #f8f5ef; --white: #ffffff;
+    --grey-light: #f0ede6; --grey-mid: #c8c4bb; --text-dark: #1a1a2e;
+    --text-mid: #4a4a5a; --text-light: #7a7a8a;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'Lato',sans-serif; background:var(--cream); color:var(--text-dark); }
+
+  /* ── COVER ── */
+  .cover { background:var(--navy); min-height:100vh; display:flex; flex-direction:column; position:relative; overflow:hidden; }
+  .cover::before { content:''; position:absolute; top:-200px; right:-200px; width:700px; height:700px; border-radius:50%; background:radial-gradient(circle,rgba(27,150,144,.15) 0%,transparent 70%); pointer-events:none; }
+  .cover::after { content:''; position:absolute; bottom:-100px; left:-100px; width:500px; height:500px; border-radius:50%; background:radial-gradient(circle,rgba(184,146,42,.1) 0%,transparent 70%); pointer-events:none; }
+  .cover-header { display:flex; justify-content:space-between; align-items:flex-start; padding:40px 64px; border-bottom:1px solid rgba(255,255,255,.08); }
+  .cover-wordmark .inst { font-family:'Lato',sans-serif; font-weight:700; font-size:13px; letter-spacing:.2em; text-transform:uppercase; color:rgba(255,255,255,.9); }
+  .cover-wordmark .dept { font-family:'DM Mono',monospace; font-size:10px; letter-spacing:.15em; color:var(--teal-light); text-transform:uppercase; }
+  .cover-date { font-family:'DM Mono',monospace; font-size:10px; letter-spacing:.1em; color:rgba(255,255,255,.35); text-align:right; text-transform:uppercase; }
+  .cover-body { flex:1; display:flex; flex-direction:column; justify-content:center; padding:60px 64px; position:relative; z-index:1; }
+  .cover-eyebrow { font-family:'DM Mono',monospace; font-size:11px; letter-spacing:.25em; text-transform:uppercase; color:var(--teal-light); margin-bottom:24px; }
+  .cover-title { font-family:'Playfair Display',serif; font-size:clamp(48px,7vw,88px); font-weight:700; color:var(--white); line-height:1.05; margin-bottom:12px; }
+  .cover-title em { font-style:italic; color:var(--gold-light); }
+  .cover-subtitle { font-family:'Lato',sans-serif; font-size:18px; font-weight:300; color:rgba(255,255,255,.5); margin-bottom:48px; letter-spacing:.05em; }
+  .top10-grid { display:grid; grid-template-columns:repeat(5,1fr); gap:12px; margin-top:32px; }
+  .top10-card { background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.08); border-radius:8px; padding:16px; transition:background .2s,border-color .2s; }
+  .top10-card:hover { background:rgba(255,255,255,.08); border-color:rgba(27,150,144,.4); }
+  .top10-card .rank { font-family:'Playfair Display',serif; font-size:26px; font-weight:700; color:var(--teal); opacity:.6; line-height:1; margin-bottom:6px; }
+  .top10-card .skill-name { font-size:12px; font-weight:700; color:var(--white); margin-bottom:3px; line-height:1.3; }
+  .top10-card .skill-desc { font-size:10px; color:rgba(255,255,255,.4); line-height:1.4; }
+  .top10-card .tag { display:inline-block; margin-top:6px; font-family:'DM Mono',monospace; font-size:9px; letter-spacing:.1em; text-transform:uppercase; padding:2px 6px; border-radius:3px; background:rgba(27,150,144,.15); color:var(--teal-light); }
+  .cover-cta { margin-top:48px; display:flex; align-items:center; gap:16px; }
+  .btn-explore { background:var(--teal); color:var(--white); border:none; padding:14px 32px; border-radius:4px; font-family:'Lato',sans-serif; font-weight:700; font-size:13px; letter-spacing:.1em; text-transform:uppercase; cursor:pointer; transition:background .2s; }
+  .btn-explore:hover { background:var(--teal-light); }
+  .cover-nav-hint { font-family:'DM Mono',monospace; font-size:10px; color:rgba(255,255,255,.3); letter-spacing:.1em; }
+  .source-ribbon { background:rgba(255,255,255,.03); border-top:1px solid rgba(255,255,255,.06); padding:12px 64px; display:flex; gap:20px; flex-wrap:wrap; align-items:center; position:relative; z-index:1; }
+  .source-ribbon span { font-family:'DM Mono',monospace; font-size:9px; letter-spacing:.1em; text-transform:uppercase; color:rgba(255,255,255,.2); }
+  .source-ribbon a { font-family:'DM Mono',monospace; font-size:9px; letter-spacing:.06em; text-transform:uppercase; color:var(--teal); text-decoration:none; border-bottom:1px solid rgba(27,150,144,.3); transition:color .2s; }
+  .source-ribbon a:hover { color:var(--teal-light); }
+  .cover-footer { padding:20px 64px; border-top:1px solid rgba(255,255,255,.06); display:flex; justify-content:space-between; position:relative; z-index:1; }
+  .cover-footer p { font-family:'DM Mono',monospace; font-size:9px; letter-spacing:.12em; text-transform:uppercase; color:rgba(255,255,255,.2); }
+
+  /* ── TABS ── */
+  .tabs-section { display:none; background:var(--cream); min-height:100vh; }
+  .tabs-section.active { display:block; }
+  .tabs-header { background:var(--navy); padding:0 48px; display:flex; align-items:flex-end; gap:0; overflow-x:auto; position:sticky; top:0; z-index:100; border-bottom:3px solid var(--teal); }
+  .back-btn { font-family:'DM Mono',monospace; font-size:10px; letter-spacing:.15em; text-transform:uppercase; color:rgba(255,255,255,.4); background:none; border:none; cursor:pointer; padding:18px 20px; display:flex; align-items:flex-end; gap:6px; white-space:nowrap; transition:color .2s; margin-right:12px; }
+  .back-btn:hover { color:var(--teal-light); }
+  .tab-btn { font-family:'Lato',sans-serif; font-weight:700; font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:rgba(255,255,255,.4); background:none; border:none; border-bottom:3px solid transparent; margin-bottom:-3px; cursor:pointer; padding:18px 18px 15px; white-space:nowrap; transition:color .2s,border-color .2s; }
+  .tab-btn:hover { color:rgba(255,255,255,.7); }
+  .tab-btn.active { color:var(--teal-light); border-bottom-color:var(--teal-light); }
+  .tab-content { display:none; padding:48px 64px; max-width:1400px; margin:0 auto; }
+  .tab-content.active { display:block; }
+
+  /* ── EDITABLE SECTIONS ── */
+  .edit-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:24px; }
+  .unlock-btn { background:var(--teal); color:var(--white); border:none; padding:10px 16px; border-radius:4px; font-family:'Lato',sans-serif; font-weight:700; font-size:12px; letter-spacing:.08em; text-transform:uppercase; cursor:pointer; transition:background .2s; }
+  .unlock-btn:hover { background:var(--teal-light); }
+  .unlock-btn:disabled { background:var(--grey-mid); cursor:not-allowed; }
+
+  /* ── PASSCODE MODAL ── */
+  .modal { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,.5); z-index:1000; align-items:center; justify-content:center; }
+  .modal.active { display:flex; }
+  .modal-content { background:var(--white); padding:32px; border-radius:8px; max-width:400px; box-shadow:0 4px 16px rgba(0,0,0,.2); }
+  .modal-title { font-size:18px; font-weight:700; color:var(--navy); margin-bottom:16px; }
+  .modal-input { width:100%; padding:12px; font-size:16px; border:1px solid var(--grey-mid); border-radius:4px; margin-bottom:16px; letter-spacing:.2em; text-align:center; }
+  .modal-buttons { display:flex; gap:12px; }
+  .modal-btn { flex:1; padding:12px; border:none; border-radius:4px; font-weight:700; font-size:12px; cursor:pointer; transition:background .2s; }
+  .modal-btn.submit { background:var(--teal); color:var(--white); }
+  .modal-btn.submit:hover { background:var(--teal-light); }
+  .modal-btn.cancel { background:var(--grey-light); color:var(--text-dark); }
+  .modal-btn.cancel:hover { background:var(--grey-mid); }
+  .modal-error { color:#c03232; font-size:12px; margin-top:12px; text-align:center; }
+
+  /* ── TYPOGRAPHY ── */
+  .section-eyebrow { font-family:'DM Mono',monospace; font-size:10px; letter-spacing:.25em; text-transform:uppercase; color:var(--teal); margin-bottom:10px; }
+  .section-title { font-family:'Playfair Display',serif; font-size:38px; font-weight:700; color:var(--navy); line-height:1.1; margin-bottom:14px; }
+  .section-intro { font-family:'Lato',sans-serif; font-size:15px; font-weight:300; color:var(--text-mid); max-width:820px; line-height:1.7; margin-bottom:32px; }
+  .section-intro a { color:var(--teal); text-decoration:none; border-bottom:1px solid rgba(27,150,144,.3); }
+  .info-box { background:rgba(27,150,144,.07); border-left:3px solid var(--teal); border-radius:0 6px 6px 0; padding:14px 18px; margin:0 0 28px; font-size:13px; color:var(--text-mid); line-height:1.6; }
+  .info-box strong { color:var(--navy); }
+  .divider { height:1px; background:var(--grey-light); margin:40px 0; }
+
+  /* ── EDITABLE TABLE STYLES ── */
+  .editable-table { width:100%; border-collapse:collapse; background:var(--white); border-radius:8px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,.05); margin-bottom:12px; }
+  .editable-table th { background:var(--navy); color:rgba(255,255,255,.7); font-family:'DM Mono',monospace; font-size:9px; letter-spacing:.15em; text-transform:uppercase; padding:10px 14px; text-align:left; }
+  .editable-table td { padding:11px 14px; border-bottom:1px solid var(--grey-light); font-size:12px; color:var(--text-mid); vertical-align:top; line-height:1.5; }
+  .editable-table tr:last-child td { border-bottom:none; }
+  .editable-table td:first-child { font-weight:700; color:var(--navy); font-size:13px; }
+  .edit-cell-btn { background:none; border:none; color:var(--teal); cursor:pointer; font-size:14px; padding:4px 8px; }
+  .edit-cell-btn:hover { opacity:.7; }
+
+  /* ── EDIT FORM ── */
+  .edit-form { background:var(--grey-light); padding:20px; border-radius:8px; margin:16px 0; }
+  .form-group { margin-bottom:16px; }
+  .form-label { display:block; font-weight:700; font-size:12px; color:var(--navy); margin-bottom:6px; text-transform:uppercase; letter-spacing:.08em; }
+  .form-input { width:100%; padding:10px; font-size:13px; border:1px solid var(--grey-mid); border-radius:4px; font-family:'Lato',sans-serif; }
+  .form-buttons { display:flex; gap:12px; margin-top:16px; }
+  .form-btn { flex:1; padding:10px; border:none; border-radius:4px; font-weight:700; font-size:12px; cursor:pointer; transition:background .2s; }
+  .form-btn.save { background:var(--teal); color:var(--white); }
+  .form-btn.save:hover { background:var(--teal-light); }
+  .form-btn.cancel { background:var(--grey-mid); color:var(--white); }
+  .form-btn.cancel:hover { background:var(--text-light); }
+
+  /* ── STATUS MESSAGES ── */
+  .status-message { padding:12px; border-radius:4px; font-size:12px; margin-bottom:16px; display:none; }
+  .status-message.success { background:rgba(99,153,34,.1); color:#3b6d11; border-left:3px solid #639922; }
+  .status-message.error { background:rgba(252,235,235,.8); color:#a32d2d; border-left:3px solid #e24b4a; }
+  .status-message.show { display:block; }
+
+  @media(max-width:960px){
+    .top10-grid{grid-template-columns:repeat(2,1fr);}
+    .tab-content{padding:28px 20px;}
+    .cover-body,.cover-header{padding:28px 20px;}
+    .tabs-header{padding:0 12px;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ══════════════════ COVER ══════════════════ -->
+<div class="cover" id="cover">
+  <div class="cover-header">
+    <div class="cover-wordmark">
+      <span class="inst">Weston College</span>
+      <span class="dept">Digital Pedagogy · Quality &amp; Innovation</span>
+    </div>
+    <div class="cover-date">April 2026 · v3 Live Editable Edition</div>
+  </div>
+  <div class="cover-body">
+    <div class="cover-eyebrow">Digital Skills Intelligence Report — All Curriculum Areas</div>
+    <div class="cover-title">The Digital<br><em>Skills</em><br>Landscape</div>
+    <div class="cover-subtitle">All 30 Curriculum Areas · FE &amp; HE · Industry-Specific · SEND &amp; Inclusion · Digital Leads</div>
+    <div class="cover-cta">
+      <button class="btn-explore" onclick="openTabs()">Explore All 8 Sections →</button>
+    </div>
+  </div>
+  <div class="cover-footer">
+    <p>Prepared by Graeme Wright · Digital Pedagogy Coach · Weston College</p>
+    <p>Live Edition · Dynamic Data · GitHub-Synced</p>
+  </div>
+</div>
+
+<!-- ══════════════════ TABS ══════════════════ -->
+<div class="tabs-section" id="tabsSection">
+  <div class="tabs-header">
+    <button class="back-btn" onclick="closeTabs()">← Cover</button>
+    <button class="tab-btn active" onclick="showTab('tab1',this)">1 · General Skills</button>
+    <button class="tab-btn" onclick="showTab('tab2',this)">2 · All Subjects</button>
+    <button class="tab-btn" onclick="showTab('tab3',this)">3 · Industry Skills</button>
+    <button class="tab-btn" onclick="showTab('tab4',this)">4 · Framing</button>
+    <button class="tab-btn" onclick="showTab('tab5',this)">5 · SEND &amp; Inclusion</button>
+    <button class="tab-btn" onclick="showTab('tab6',this)">6 · Skills Progression</button>
+    <button class="tab-btn" onclick="showTab('tab7',this)">7 · Teacher Skills</button>
+    <button class="tab-btn" onclick="showTab('tab8',this)">8 · Digital Leads</button>
+  </div>
+
+  <!-- ══ TAB 1: READ-ONLY REFERENCE (From original) ══ -->
+  <div class="tab-content active" id="tab1">
+    <div class="section-eyebrow">Tab 01 of 08</div>
+    <h2 class="section-title">General Digital Skills</h2>
+    <p class="section-intro">Read-only reference. This tab contains the foundational EDS framework.</p>
+    <div class="info-box"><strong>This tab is read-only.</strong> It provides the reference framework for all other sections. Tabs 2, 3, 5, and 8 are editable.</div>
+  </div>
+
+  <!-- ══ TAB 2: EDITABLE SUBJECTS & AREAS ══ -->
+  <div class="tab-content" id="tab2">
+    <div class="section-eyebrow">Tab 02 of 08</div>
+    <div class="edit-header">
+      <h2 class="section-title">All Subjects &amp; Curriculum Areas</h2>
+      <button class="unlock-btn" onclick="unlockTab('tab2')">🔓 Unlock Editing</button>
+    </div>
+    <div class="status-message" id="status-tab2"></div>
+    <div id="tab2-content">
+      <p class="section-intro">This tab will load editable curriculum area data from GitHub. Areas can be edited once unlocked with passcode 2402.</p>
+    </div>
+  </div>
+
+  <!-- ══ TAB 3: EDITABLE INDUSTRY SKILLS ══ -->
+  <div class="tab-content" id="tab3">
+    <div class="section-eyebrow">Tab 03 of 08</div>
+    <div class="edit-header">
+      <h2 class="section-title">Industry-Specific Digital Skills</h2>
+      <button class="unlock-btn" onclick="unlockTab('tab3')">🔓 Unlock Editing</button>
+    </div>
+    <div class="status-message" id="status-tab3"></div>
+    <div id="tab3-content">
+      <p class="section-intro">This tab will load industry-specific skills from GitHub. Content can be edited once unlocked.</p>
+    </div>
+  </div>
+
+  <!-- ══ TAB 4: READ-ONLY FRAMING ══ -->
+  <div class="tab-content" id="tab4">
+    <div class="section-eyebrow">Tab 04 of 08</div>
+    <h2 class="section-title">Framing Digital Skills</h2>
+    <p class="section-intro">Read-only reference on how to frame digital skills for learner engagement.</p>
+    <div class="info-box"><strong>This tab is read-only.</strong> It provides strategic framing guidance.</div>
+  </div>
+
+  <!-- ══ TAB 5: EDITABLE SEND & INCLUSION ══ -->
+  <div class="tab-content" id="tab5">
+    <div class="section-eyebrow">Tab 05 of 08</div>
+    <div class="edit-header">
+      <h2 class="section-title">SEND, Inclusion &amp; Accessibility</h2>
+      <button class="unlock-btn" onclick="unlockTab('tab5')">🔓 Unlock Editing</button>
+    </div>
+    <div class="status-message" id="status-tab5"></div>
+    <div id="tab5-content">
+      <p class="section-intro">This tab will load SEND and inclusion content from GitHub. Content can be edited once unlocked.</p>
+    </div>
+  </div>
+
+  <!-- ══ TAB 6: READ-ONLY PROGRESSION ══ -->
+  <div class="tab-content" id="tab6">
+    <div class="section-eyebrow">Tab 06 of 08</div>
+    <h2 class="section-title">Digital Skills Progression</h2>
+    <p class="section-intro">Read-only reference on skills progression from Foundation to Highly Advanced.</p>
+    <div class="info-box"><strong>This tab is read-only.</strong> It provides progression ladder reference.</div>
+  </div>
+
+  <!-- ══ TAB 7: READ-ONLY TEACHER SKILLS ══ -->
+  <div class="tab-content" id="tab7">
+    <div class="section-eyebrow">Tab 07 of 08</div>
+    <h2 class="section-title">Teacher Digital Skills (TLA-Focused)</h2>
+    <p class="section-intro">Read-only reference on teacher digital skills progression.</p>
+    <div class="info-box"><strong>This tab is read-only.</strong> It provides teacher TLA framework reference.</div>
+  </div>
+
+  <!-- ══ TAB 8: EDITABLE DIGITAL LEADS ══ -->
+  <div class="tab-content" id="tab8">
+    <div class="section-eyebrow">Tab 08 of 08</div>
+    <div class="edit-header">
+      <h2 class="section-title">Digital Leads by Curriculum Area</h2>
+      <button class="unlock-btn" onclick="unlockTab('tab8')">🔓 Unlock Editing</button>
+    </div>
+    <div class="status-message" id="status-tab8"></div>
+    <div id="tab8-content">
+      <p class="section-intro">Editable table showing Head of Area and identified Digital Lead for each curriculum area. Edit to update who is the Digital Lead.</p>
+      <div id="digital-leads-table"></div>
+    </div>
+  </div>
+
+</div><!-- end tabs-section -->
+
+<!-- ══════════════════ PASSCODE MODAL ══════════════════ -->
+<div class="modal" id="passcodeModal">
+  <div class="modal-content">
+    <div class="modal-title">Unlock Editing</div>
+    <p style="font-size:13px; color:var(--text-mid); margin-bottom:16px;">Enter the 4-digit passcode to edit this section.</p>
+    <input type="password" id="passcodeInput" class="modal-input" placeholder="••••" maxlength="4" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
+    <div class="modal-buttons">
+      <button class="modal-btn submit" onclick="validatePasscode()">Unlock</button>
+      <button class="modal-btn cancel" onclick="closePasscodeModal()">Cancel</button>
+    </div>
+    <div class="modal-error" id="passcodeError"></div>
+  </div>
+</div>
+
+<script>
+  const CORRECT_PASSCODE = '2402';
+  const NETLIFY_FUNCTION_URL = '/.netlify/functions/sync-data';
+  let currentTab = null;
+  let isUnlocked = { tab2: false, tab3: false, tab5: false, tab8: false };
+  let areasData = {};
+
+  // ═══════════════════════════════════════════════════════════
+  // INITIALIZATION
+  // ═══════════════════════════════════════════════════════════
+  
+  document.addEventListener('DOMContentLoaded', async () => {
+    await loadAreasData();
+    initializeTab8();
+  });
+
+  async function loadAreasData() {
+    try {
+      // Fetch from GitHub raw content
+      const response = await fetch('https://raw.githubusercontent.com/GWC25/Digital-Skills-Framework---Weston/main/areas-data.json');
+      areasData = await response.json();
+      console.log('Areas data loaded:', areasData);
+    } catch (error) {
+      console.error('Error loading areas data:', error);
+      showStatus('tab2', 'Error loading data. Please refresh the page.', 'error');
+    }
+  }
+
+  // ═══════════════════════════════════════════════════════════
+  // TAB NAVIGATION
+  // ═══════════════════════════════════════════════════════════
+
+  function openTabs() {
+    document.getElementById('cover').style.display = 'none';
+    document.getElementById('tabsSection').classList.add('active');
+    window.scrollTo(0, 0);
+  }
+
+  function closeTabs() {
+    document.getElementById('tabsSection').classList.remove('active');
+    document.getElementById('cover').style.display = 'flex';
+    window.scrollTo(0, 0);
+  }
+
+  function showTab(tabId, btn) {
+    document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById(tabId).classList.add('active');
+    btn.classList.add('active');
+    window.scrollTo(0, 0);
+  }
+
+  // ═══════════════════════════════════════════════════════════
+  // PASSCODE & UNLOCK
+  // ═══════════════════════════════════════════════════════════
+
+  function unlockTab(tabId) {
+    currentTab = tabId;
+    document.getElementById('passcodeModal').classList.add('active');
+    document.getElementById('passcodeInput').value = '';
+    document.getElementById('passcodeError').textContent = '';
+    setTimeout(() => document.getElementById('passcodeInput').focus(), 100);
+  }
+
+  function validatePasscode() {
+    const passcode = document.getElementById('passcodeInput').value;
+    if (passcode === CORRECT_PASSCODE) {
+      isUnlocked[currentTab] = true;
+      closePasscodeModal();
+      enableEditingForTab(currentTab);
+    } else {
+      document.getElementById('passcodeError').textContent = 'Incorrect passcode. Try again.';
+      document.getElementById('passcodeInput').value = '';
+    }
+  }
+
+  function closePasscodeModal() {
+    document.getElementById('passcodeModal').classList.remove('active');
+    document.getElementById('passcodeInput').value = '';
+    document.getElementById('passcodeError').textContent = '';
+  }
+
+  function enableEditingForTab(tabId) {
+    // Hide unlock button, show editing interface
+    const unlockBtn = document.querySelector(`#${tabId} .unlock-btn`);
+    if (unlockBtn) {
+      unlockBtn.style.display = 'none';
+    }
+    showStatus(tabId, '✓ Editing unlocked. You can now edit this section.', 'success');
+  }
+
+  // ═══════════════════════════════════════════════════════════
+  // STATUS MESSAGES
+  // ═══════════════════════════════════════════════════════════
+
+  function showStatus(tabId, message, type = 'success') {
+    const statusEl = document.getElementById(`status-${tabId}`);
+    if (statusEl) {
+      statusEl.textContent = message;
+      statusEl.className = `status-message ${type} show`;
+      setTimeout(() => statusEl.classList.remove('show'), 4000);
+    }
+  }
+
+  // ═══════════════════════════════════════════════════════════
+  // TAB 8: DIGITAL LEADS TABLE
+  // ═══════════════════════════════════════════════════════════
+
+  function initializeTab8() {
+    const container = document.getElementById('digital-leads-table');
+    if (!areasData.digitalLeads || areasData.digitalLeads.length === 0) {
+      container.innerHTML = '<p style="color:var(--text-light);">Loading digital leads data...</p>';
+      return;
+    }
+
+    let html = '<table class="editable-table"><thead><tr><th>Area Code</th><th>Area Name</th><th>Head of Area</th><th>Digital Lead</th><th>Action</th></tr></thead><tbody>';
+    
+    areasData.digitalLeads.forEach(area => {
+      html += `<tr>
+        <td>${area.code}</td>
+        <td>${area.name}</td>
+        <td>${area.headOfArea || '—'}</td>
+        <td>${area.digitalLead || '—'}</td>
+        <td>
+          ${isUnlocked.tab8 ? `<button class="edit-cell-btn" onclick="editDigitalLead('${area.code}')">✎ Edit</button>` : 'View'}
+        </td>
+      </tr>`;
+    });
+
+    html += '</tbody></table>';
+    container.innerHTML = html;
+  }
+
+  function editDigitalLead(areaCode) {
+    const area = areasData.digitalLeads.find(a => a.code === areaCode);
+    if (!area) return;
+
+    const hoaInput = prompt(`Update Head of Area for ${area.code} (${area.name}):`, area.headOfArea || '');
+    if (hoaInput === null) return;
+
+    const dlInput = prompt(`Update Digital Lead for ${area.code} (${area.name}):`, area.digitalLead || '');
+    if (dlInput === null) return;
+
+    area.headOfArea = hoaInput;
+    area.digitalLead = dlInput;
+
+    // Save to GitHub
+    saveToGitHub('digitalLeads', areasData.digitalLeads);
+    initializeTab8();
+  }
+
+  // ═══════════════════════════════════════════════════════════
+  // GITHUB SYNC
+  // ═══════════════════════════════════════════════════════════
+
+  async function saveToGitHub(dataType, data) {
+    try {
+      const response = await fetch(NETLIFY_FUNCTION_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          dataType,
+          data,
+          timestamp: new Date().toISOString()
+        })
+      });
+
+      const result = await response.json();
+      if (result.success) {
+        showStatus('tab8', '✓ Changes saved to GitHub', 'success');
+        // Reload data to reflect changes
+        await loadAreasData();
+        initializeTab8();
+      } else {
+        showStatus('tab8', `Error: ${result.error}`, 'error');
+      }
+    } catch (error) {
+      console.error('Save error:', error);
+      showStatus('tab8', 'Error saving changes. Check console.', 'error');
+    }
+  }
+
+  // Allow Enter key to submit passcode
+  document.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter' && document.getElementById('passcodeModal').classList.contains('active')) {
+      validatePasscode();
+    }
+  });
+</script>
+</body>
+</html>
