@@ -1,0 +1,268 @@
+{
+  "version": "3.0",
+  "lastUpdated": "2026-04-28T00:00:00Z",
+  "digitalLeads": [
+    {
+      "code": "AGF",
+      "name": "Arts, Graphics & Fashion",
+      "headOfArea": "TBA",
+      "digitalLead": "TBA"
+    },
+    {
+      "code": "GMA",
+      "name": "Games, Media & Animation",
+      "headOfArea": "TBA",
+      "digitalLead": "TBA"
+    },
+    {
+      "code": "PAP",
+      "name": "Performance & Production",
+      "headOfArea": "TBA",
+      "digitalLead": "TBA"
+    },
+    {
+      "code": "BUI",
+      "name": "Building Services (Construction)",
+      "headOfArea": "TBA",
+      "digitalLead": "TBA"
+    },
+    {
+      "code": "CON",
+      "name": "Construction Trades",
+      "headOfArea": "TBA",
+      "digitalLead": "TBA"
+    },
+    {
+      "code": "EFE",
+      "name": "Engineering WBL (Work-based)",
+      "headOfArea": "TBA",
+      "digitalLead": "TBA"
+    },
+    {
+      "code": "EHE",
+      "name": "Engineering Higher Education",
+      "headOfArea": "TBA",
+      "digitalLead": "TBA"
+    },
+    {
+      "code": "EMV",
+      "name": "Engineering & Motor Vehicle",
+      "headOfArea": "TBA",
+      "digitalLead": "TBA"
+    },
+    {
+      "code": "ENG",
+      "name": "Engineering (General / Classroom)",
+      "headOfArea": "TBA",
+      "digitalLead": "TBA"
+    },
+    {
+      "code": "BUS",
+      "name": "Business & Tourism",
+      "headOfArea": "TBA",
+      "digitalLead": "TBA"
+    },
+    {
+      "code": "DCI",
+      "name": "Digital Computing & IT",
+      "headOfArea": "TBA",
+      "digitalLead": "TBA"
+    },
+    {
+      "code": "PRA",
+      "name": "Professional Apprenticeships",
+      "headOfArea": "TBA",
+      "digitalLead": "TBA"
+    },
+    {
+      "code": "PRS",
+      "name": "Professional Studies",
+      "headOfArea": "TBA",
+      "digitalLead": "TBA"
+    },
+    {
+      "code": "EEY",
+      "name": "Education & Early Years",
+      "headOfArea": "TBA",
+      "digitalLead": "TBA"
+    },
+    {
+      "code": "HAC",
+      "name": "Health (inc. T Level)",
+      "headOfArea": "TBA",
+      "digitalLead": "TBA"
+    },
+    {
+      "code": "FEH",
+      "name": "FIP Supported Employment Excellence",
+      "headOfArea": "TBA",
+      "digitalLead": "TBA"
+    },
+    {
+      "code": "EGL",
+      "name": "English",
+      "headOfArea": "TBA",
+      "digitalLead": "TBA"
+    },
+    {
+      "code": "ESO",
+      "name": "ESOL",
+      "headOfArea": "TBA",
+      "digitalLead": "TBA"
+    },
+    {
+      "code": "MAT",
+      "name": "Maths",
+      "headOfArea": "TBA",
+      "digitalLead": "TBA"
+    },
+    {
+      "code": "HBH",
+      "name": "Hair, Beauty & Hospitality",
+      "headOfArea": "TBA",
+      "digitalLead": "TBA"
+    },
+    {
+      "code": "ANM",
+      "name": "Animal Management",
+      "headOfArea": "TBA",
+      "digitalLead": "TBA"
+    },
+    {
+      "code": "SPO",
+      "name": "Sport",
+      "headOfArea": "TBA",
+      "digitalLead": "TBA"
+    },
+    {
+      "code": "PSF",
+      "name": "Public Services (Protective Services)",
+      "headOfArea": "TBA",
+      "digitalLead": "TBA"
+    },
+    {
+      "code": "CED",
+      "name": "Community Education",
+      "headOfArea": "TBA",
+      "digitalLead": "TBA"
+    },
+    {
+      "code": "PRE",
+      "name": "Employment Services (Pre-employment)",
+      "headOfArea": "TBA",
+      "digitalLead": "TBA"
+    },
+    {
+      "code": "SKB",
+      "name": "Skills Bootcamps",
+      "headOfArea": "TBA",
+      "digitalLead": "TBA"
+    },
+    {
+      "code": "SMX",
+      "name": "SOMAX (Offsite / Prison provision)",
+      "headOfArea": "TBA",
+      "digitalLead": "TBA"
+    },
+    {
+      "code": "SMS",
+      "name": "Sixth Form (A Level)",
+      "headOfArea": "TBA",
+      "digitalLead": "TBA"
+    },
+    {
+      "code": "AHE",
+      "name": "Access to Higher Education",
+      "headOfArea": "TBA",
+      "digitalLead": "TBA"
+    },
+    {
+      "code": "FAU",
+      "name": "FIP Autism",
+      "headOfArea": "TBA",
+      "digitalLead": "TBA"
+    },
+    {
+      "code": "FCO",
+      "name": "FIP Complex Needs",
+      "headOfArea": "TBA",
+      "digitalLead": "TBA"
+    },
+    {
+      "code": "FPL",
+      "name": "FIP Pre-Vocational",
+      "headOfArea": "TBA",
+      "digitalLead": "TBA"
+    }
+  ],
+  "areas": [
+    {
+      "code": "AGF",
+      "name": "Arts, Graphics & Fashion",
+      "coreDigitalSkills": ["Digital research", "Content creation", "Portfolio development", "Social media presence"],
+      "subjectTools": ["Adobe Creative Suite", "Canva Pro", "CLO 3D / Browzwear", "AI image generation", "Behance"],
+      "feContext": "L1–L3 FE; HND/BA at UCW. Digital portfolio is core evidence."
+    }
+  ],
+  "industrySkills": {
+    "construction": {
+      "title": "Construction & Built Environment",
+      "code": "BUI, CON, ENG, EHE",
+      "skills": [
+        {
+          "name": "BIM & CAD Software",
+          "description": "Revit, AutoCAD — reading, producing and annotating digital drawings. BIM Level 2 is now a UK government procurement requirement."
+        },
+        {
+          "name": "Digital Site Management",
+          "description": "QR clock-in, digital site diaries, H&S reporting apps (Fieldwire, Procore, Site App Pro)."
+        }
+      ]
+    }
+  },
+  "sendProvisions": {
+    "autism": {
+      "title": "Autism (FAU)",
+      "icon": "🔵",
+      "provisions": [
+        "Many autistic learners have strong digital aptitude — leverage this as a strength",
+        "Predictable, consistent digital environments reduce anxiety (consistent Teams layout, clear file naming)",
+        "AAC apps (Proloquo2Go, Grid 3) support communication in digital learning contexts",
+        "Visual schedule apps support session structure and transitions",
+        "Avoid unexpected platform changes without notice",
+        "Sensory considerations — screen brightness, sound alerts in digital tools"
+      ]
+    },
+    "complexNeeds": {
+      "title": "Complex Needs (FCO)",
+      "icon": "🟣",
+      "provisions": [
+        "Eye-gaze technology (Tobii) enables digital access for learners without motor control",
+        "Switch-access devices provide alternative computer interaction",
+        "Clicker / Widgit Online for literacy and communication support",
+        "Sensory interactive digital surfaces for engagement",
+        "Technology is often the primary communication channel — reliability is critical",
+        "Staff training on assistive technology is non-negotiable, not optional"
+      ]
+    },
+    "preVocational": {
+      "title": "Pre-Vocational / FPL",
+      "icon": "🟢",
+      "provisions": [
+        "Basic device operation as a foundation skill for transition to employment",
+        "Taskmaster / visual timetable apps support daily digital routines",
+        "Read&Write (text-to-speech, dictation) reduces writing barriers",
+        "Digital daily living tools: travel apps, banking apps, NHS App",
+        "Simple photo/video for portfolio and communication",
+        "Immersive Reader for accessible reading of digital content"
+      ]
+    }
+  },
+  "metadata": {
+    "totalAreas": 32,
+    "lastEditedBy": "Graeme Wright",
+    "lastEditDate": "2026-04-28",
+    "syncedToGitHub": true,
+    "accessLevel": "ReadOnly except with passcode 2402"
+  }
+}
