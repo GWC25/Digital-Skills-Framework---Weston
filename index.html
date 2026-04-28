@@ -3,12 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Digital Skills Framework — Weston College (Full Curriculum)</title>
+<title>Digital Skills Framework - Weston College</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Mono:wght@400;500&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --navy: #1a2744; --navy-mid: #23366b; --teal: #1b9690; --teal-light: #2ab5ae;
+    --navy: #1a2744; --teal: #1b9690; --teal-light: #2ab5ae;
     --gold: #b8922a; --gold-light: #d4a843; --cream: #f8f5ef; --white: #ffffff;
     --grey-light: #f0ede6; --grey-mid: #c8c4bb; --text-dark: #1a1a2e;
     --text-mid: #4a4a5a; --text-light: #7a7a8a;
@@ -16,42 +16,57 @@
   * { margin:0; padding:0; box-sizing:border-box; }
   body { font-family:'Lato',sans-serif; background:var(--cream); color:var(--text-dark); }
 
+  /* ─────────────────── COVER PAGE ─────────────────── */
   .cover { background:var(--navy); min-height:100vh; display:flex; flex-direction:column; position:relative; overflow:hidden; }
   .cover::before { content:''; position:absolute; top:-200px; right:-200px; width:700px; height:700px; border-radius:50%; background:radial-gradient(circle,rgba(27,150,144,.15) 0%,transparent 70%); pointer-events:none; }
   .cover::after { content:''; position:absolute; bottom:-100px; left:-100px; width:500px; height:500px; border-radius:50%; background:radial-gradient(circle,rgba(184,146,42,.1) 0%,transparent 70%); pointer-events:none; }
-  .cover-header { display:flex; justify-content:space-between; align-items:flex-start; padding:40px 64px; border-bottom:1px solid rgba(255,255,255,.08); }
-  .cover-wordmark .inst { font-family:'Lato',sans-serif; font-weight:700; font-size:13px; letter-spacing:.2em; text-transform:uppercase; color:rgba(255,255,255,.9); }
+
+  .cover-header { display:flex; justify-content:space-between; align-items:flex-start; padding:40px 64px; border-bottom:1px solid rgba(255,255,255,.15); }
+  .cover-wordmark { display:flex; flex-direction:column; gap:4px; }
+  .cover-wordmark .inst { font-family:'Lato',sans-serif; font-weight:700; font-size:13px; letter-spacing:.2em; text-transform:uppercase; color:var(--white); opacity:0.95; }
   .cover-wordmark .dept { font-family:'DM Mono',monospace; font-size:10px; letter-spacing:.15em; color:var(--teal-light); text-transform:uppercase; }
-  .cover-date { font-family:'DM Mono',monospace; font-size:10px; letter-spacing:.1em; color:rgba(255,255,255,.35); text-align:right; text-transform:uppercase; }
+  .cover-date { font-family:'DM Mono',monospace; font-size:10px; letter-spacing:.1em; color:var(--white); opacity:0.7; text-align:right; text-transform:uppercase; }
+
   .cover-body { flex:1; display:flex; flex-direction:column; justify-content:center; padding:60px 64px; position:relative; z-index:1; }
   .cover-eyebrow { font-family:'DM Mono',monospace; font-size:11px; letter-spacing:.25em; text-transform:uppercase; color:var(--teal-light); margin-bottom:24px; }
   .cover-title { font-family:'Playfair Display',serif; font-size:clamp(48px,7vw,88px); font-weight:700; color:var(--white); line-height:1.05; margin-bottom:12px; }
   .cover-title em { font-style:italic; color:var(--gold-light); }
-  .cover-subtitle { font-family:'Lato',sans-serif; font-size:18px; font-weight:300; color:rgba(255,255,255,.5); margin-bottom:48px; letter-spacing:.05em; }
+  .cover-subtitle { font-family:'Lato',sans-serif; font-size:18px; font-weight:300; color:var(--white); opacity:0.8; margin-bottom:48px; letter-spacing:.05em; }
+
   .cover-cta { margin-top:48px; display:flex; align-items:center; gap:16px; }
   .btn-explore { background:var(--teal); color:var(--white); border:none; padding:14px 32px; border-radius:4px; font-family:'Lato',sans-serif; font-weight:700; font-size:13px; letter-spacing:.1em; text-transform:uppercase; cursor:pointer; transition:background .2s; }
   .btn-explore:hover { background:var(--teal-light); }
-  .cover-footer { padding:20px 64px; border-top:1px solid rgba(255,255,255,.06); display:flex; justify-content:space-between; position:relative; z-index:1; }
-  .cover-footer p { font-family:'DM Mono',monospace; font-size:9px; letter-spacing:.12em; text-transform:uppercase; color:rgba(255,255,255,.2); }
+  .btn-explore:focus { outline:2px solid var(--gold); outline-offset:2px; }
 
+  .cover-footer { padding:20px 64px; border-top:1px solid rgba(255,255,255,.15); display:flex; justify-content:center; position:relative; z-index:1; }
+  .cover-footer p { font-family:'Lato',sans-serif; font-size:12px; letter-spacing:.06em; color:var(--white); opacity:0.8; text-align:center; }
+
+  /* ─────────────────── TABS ─────────────────── */
   .tabs-section { display:none; background:var(--cream); min-height:100vh; }
   .tabs-section.active { display:block; }
+
   .tabs-header { background:var(--navy); padding:0 48px; display:flex; align-items:flex-end; gap:0; overflow-x:auto; position:sticky; top:0; z-index:100; border-bottom:3px solid var(--teal); }
-  .back-btn { font-family:'DM Mono',monospace; font-size:10px; letter-spacing:.15em; text-transform:uppercase; color:rgba(255,255,255,.4); background:none; border:none; cursor:pointer; padding:18px 20px; display:flex; align-items:flex-end; gap:6px; white-space:nowrap; transition:color .2s; margin-right:12px; }
-  .back-btn:hover { color:var(--teal-light); }
-  .tab-btn { font-family:'Lato',sans-serif; font-weight:700; font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:rgba(255,255,255,.4); background:none; border:none; border-bottom:3px solid transparent; margin-bottom:-3px; cursor:pointer; padding:18px 18px 15px; white-space:nowrap; transition:color .2s,border-color .2s; }
-  .tab-btn:hover { color:rgba(255,255,255,.7); }
-  .tab-btn.active { color:var(--teal-light); border-bottom-color:var(--teal-light); }
+  .back-btn { font-family:'DM Mono',monospace; font-size:10px; letter-spacing:.15em; text-transform:uppercase; color:var(--white); opacity:0.7; background:none; border:none; cursor:pointer; padding:18px 20px; display:flex; align-items:flex-end; gap:6px; white-space:nowrap; transition:color .2s,opacity .2s; margin-right:12px; }
+  .back-btn:hover { opacity:1; }
+  .back-btn:focus { outline:2px solid var(--gold); outline-offset:-2px; }
+
+  .tab-btn { font-family:'Lato',sans-serif; font-weight:700; font-size:11px; letter-spacing:.06em; text-transform:uppercase; color:var(--white); opacity:0.6; background:none; border:none; border-bottom:3px solid transparent; margin-bottom:-3px; cursor:pointer; padding:18px 18px 15px; white-space:nowrap; transition:opacity .2s,border-color .2s; }
+  .tab-btn:hover { opacity:0.9; }
+  .tab-btn:focus { outline:2px solid var(--gold); outline-offset:-2px; }
+  .tab-btn.active { color:var(--white); opacity:1; border-bottom-color:var(--teal-light); }
+
   .tab-content { display:none; padding:48px 64px; max-width:1400px; margin:0 auto; }
   .tab-content.active { display:block; }
 
+  /* ─────────────────── CONTENT STYLING ─────────────────── */
   .section-eyebrow { font-family:'DM Mono',monospace; font-size:10px; letter-spacing:.25em; text-transform:uppercase; color:var(--teal); margin-bottom:10px; }
   .section-title { font-family:'Playfair Display',serif; font-size:38px; font-weight:700; color:var(--navy); line-height:1.1; margin-bottom:14px; }
   .section-intro { font-family:'Lato',sans-serif; font-size:15px; font-weight:300; color:var(--text-mid); max-width:820px; line-height:1.7; margin-bottom:32px; }
-  .section-intro a { color:var(--teal); text-decoration:none; border-bottom:1px solid rgba(27,150,144,.3); }
-  .info-box { background:rgba(27,150,144,.07); border-left:3px solid var(--teal); border-radius:0 6px 6px 0; padding:14px 18px; margin:0 0 28px; font-size:13px; color:var(--text-mid); line-height:1.6; }
+  .section-intro a { color:var(--teal); text-decoration:underline; }
+  .section-intro a:focus { outline:2px solid var(--navy); outline-offset:2px; }
+
+  .info-box { background:rgba(27,150,144,.08); border-left:3px solid var(--teal); border-radius:0 6px 6px 0; padding:14px 18px; margin:0 0 28px; font-size:13px; color:var(--text-dark); line-height:1.6; }
   .info-box strong { color:var(--navy); }
-  .divider { height:1px; background:var(--grey-light); margin:40px 0; }
 
   .skills-columns { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; margin-bottom:40px; }
   .skills-column { background:var(--white); border-radius:8px; overflow:hidden; box-shadow:0 2px 10px rgba(0,0,0,.06); }
@@ -60,10 +75,10 @@
   .col-icon.learning { background:rgba(27,150,144,.2); }
   .col-icon.work { background:rgba(184,146,42,.2); }
   .col-icon.society { background:rgba(35,54,107,.3); }
-  .skills-column-header h3 { font-family:'Lato',sans-serif; font-weight:700; font-size:13px; letter-spacing:.08em; text-transform:uppercase; color:var(--white); }
+  .skills-column-header h3 { font-family:'Lato',sans-serif; font-weight:700; font-size:13px; letter-spacing:.08em; text-transform:uppercase; color:var(--white); opacity:0.95; }
   .skill-item { padding:12px 22px; border-bottom:1px solid var(--grey-light); display:flex; gap:12px; align-items:flex-start; }
   .skill-item:last-child { border-bottom:none; }
-  .skill-number { font-family:'DM Mono',monospace; font-size:10px; color:var(--grey-mid); min-width:18px; padding-top:2px; }
+  .skill-number { font-family:'DM Mono',monospace; font-size:10px; color:var(--text-light); min-width:18px; padding-top:2px; }
   .skill-info h4 { font-weight:700; font-size:13px; color:var(--navy); margin-bottom:2px; }
   .skill-info p { font-size:11px; color:var(--text-mid); line-height:1.5; }
 
@@ -71,31 +86,37 @@
   .sources-block h4 { font-family:'DM Mono',monospace; font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:var(--teal-light); margin-bottom:16px; }
   .sources-list { display:grid; grid-template-columns:repeat(2,1fr); gap:10px 28px; }
   .source-item { display:flex; flex-direction:column; gap:2px; }
-  .source-item a { font-size:13px; color:var(--white); text-decoration:none; border-bottom:1px solid rgba(255,255,255,.15); transition:color .2s; }
-  .source-item a:hover { color:var(--teal-light); }
-  .source-item span { font-family:'DM Mono',monospace; font-size:9px; letter-spacing:.06em; color:rgba(255,255,255,.3); text-transform:uppercase; }
+  .source-item a { font-size:13px; color:var(--white); opacity:0.95; text-decoration:underline; transition:opacity .2s; }
+  .source-item a:hover { opacity:1; }
+  .source-item a:focus { outline:2px solid var(--gold); outline-offset:2px; }
+  .source-item span { font-family:'DM Mono',monospace; font-size:9px; letter-spacing:.06em; color:var(--white); opacity:0.7; text-transform:uppercase; }
 
+  /* ─────────────────── MODAL ─────────────────── */
   .modal { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,.5); z-index:1000; align-items:center; justify-content:center; }
   .modal.active { display:flex; }
   .modal-content { background:var(--white); padding:32px; border-radius:8px; max-width:400px; box-shadow:0 4px 16px rgba(0,0,0,.2); }
   .modal-title { font-size:18px; font-weight:700; color:var(--navy); margin-bottom:16px; }
-  .modal-input { width:100%; padding:12px; font-size:16px; border:1px solid var(--grey-mid); border-radius:4px; margin-bottom:16px; letter-spacing:.2em; text-align:center; }
+  .modal-input { width:100%; padding:12px; font-size:16px; border:2px solid var(--grey-mid); border-radius:4px; margin-bottom:16px; letter-spacing:.2em; text-align:center; }
+  .modal-input:focus { border-color:var(--teal); outline:none; }
   .modal-buttons { display:flex; gap:12px; }
   .modal-btn { flex:1; padding:12px; border:none; border-radius:4px; font-weight:700; font-size:12px; cursor:pointer; transition:background .2s; }
   .modal-btn.submit { background:var(--teal); color:var(--white); }
   .modal-btn.submit:hover { background:var(--teal-light); }
+  .modal-btn.submit:focus { outline:2px solid var(--navy); outline-offset:2px; }
   .modal-btn.cancel { background:var(--grey-light); color:var(--text-dark); }
   .modal-btn.cancel:hover { background:var(--grey-mid); }
+  .modal-btn.cancel:focus { outline:2px solid var(--navy); outline-offset:2px; }
   .modal-error { color:#c03232; font-size:12px; margin-top:12px; text-align:center; }
 
   .status-message { padding:12px; border-radius:4px; font-size:12px; margin-bottom:16px; display:none; }
-  .status-message.success { background:rgba(99,153,34,.1); color:#3b6d11; border-left:3px solid #639922; }
+  .status-message.success { background:rgba(99,153,34,.12); color:#2d5e0f; border-left:3px solid #639922; }
   .status-message.show { display:block; }
 
   .edit-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:24px; }
   .unlock-btn { background:var(--teal); color:var(--white); border:none; padding:10px 16px; border-radius:4px; font-family:'Lato',sans-serif; font-weight:700; font-size:12px; letter-spacing:.08em; text-transform:uppercase; cursor:pointer; transition:background .2s; }
   .unlock-btn:hover { background:var(--teal-light); }
-  .unlock-btn:disabled { background:var(--grey-mid); cursor:not-allowed; }
+  .unlock-btn:focus { outline:2px solid var(--navy); outline-offset:2px; }
+  .unlock-btn:disabled { background:var(--grey-mid); cursor:not-allowed; opacity:0.6; }
 
   .framing-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:24px; margin-bottom:40px; }
   .framing-card { background:var(--white); border-radius:8px; border-left:4px solid var(--teal); padding:24px; box-shadow:0 2px 8px rgba(0,0,0,.05); }
@@ -108,6 +129,9 @@
     .skills-columns, .framing-grid { grid-template-columns:1fr; }
     .sources-list { grid-template-columns:1fr; }
     .tab-content { padding:28px 20px; }
+    .cover-header { padding:30px 20px; }
+    .cover-body { padding:40px 20px; }
+    .cover-footer { padding:16px 20px; }
   }
 </style>
 </head>
@@ -118,21 +142,20 @@
   <div class="cover-header">
     <div class="cover-wordmark">
       <span class="inst">Weston College</span>
-      <span class="dept">Digital Pedagogy · Quality &amp; Innovation</span>
+      <span class="dept">Digital Pedagogy - Quality & Innovation</span>
     </div>
-    <div class="cover-date">April 2026 · v3.1 Live Edition (JSON-Powered)</div>
+    <div class="cover-date">April 2026 - v3.1</div>
   </div>
   <div class="cover-body">
-    <div class="cover-eyebrow">Digital Skills Intelligence Report — All Curriculum Areas</div>
+    <div class="cover-eyebrow">Intelligence Report - All Curriculum Areas</div>
     <div class="cover-title">The Digital<br><em>Skills</em><br>Landscape</div>
-    <div class="cover-subtitle">8 Tabs · 32 Curriculum Areas · FE &amp; HE · Dynamic Data · Live Edits</div>
+    <div class="cover-subtitle">8 Sections - 32 Curriculum Areas - FE & HE - Live Edition</div>
     <div class="cover-cta">
       <button class="btn-explore" onclick="openTabs()">Explore All 8 Sections →</button>
     </div>
   </div>
   <div class="cover-footer">
-    <p>Prepared by Graeme Wright · Digital Pedagogy Coach · Weston College</p>
-    <p>Live Edition · JSON Data Structure · GitHub-Synced via Netlify</p>
+    <p>Prepared by Graeme Wright, Digital Pedagogy Coach, Weston College</p>
   </div>
 </div>
 
@@ -140,63 +163,53 @@
 <div class="tabs-section" id="tabsSection">
   <div class="tabs-header">
     <button class="back-btn" onclick="closeTabs()">← Cover</button>
-    <button class="tab-btn active" onclick="showTab('tab1',this)">1 · General Skills</button>
-    <button class="tab-btn" onclick="showTab('tab2',this)">2 · All Subjects</button>
-    <button class="tab-btn" onclick="showTab('tab3',this)">3 · Industry Skills</button>
-    <button class="tab-btn" onclick="showTab('tab4',this)">4 · Framing</button>
-    <button class="tab-btn" onclick="showTab('tab5',this)">5 · SEND</button>
-    <button class="tab-btn" onclick="showTab('tab6',this)">6 · Progression</button>
-    <button class="tab-btn" onclick="showTab('tab7',this)">7 · Teacher Skills</button>
-    <button class="tab-btn" onclick="showTab('tab8',this)">8 · Digital Leads</button>
+    <button class="tab-btn active" onclick="showTab('tab1',this)">1 - General Skills</button>
+    <button class="tab-btn" onclick="showTab('tab2',this)">2 - All Subjects</button>
+    <button class="tab-btn" onclick="showTab('tab3',this)">3 - Industry Skills</button>
+    <button class="tab-btn" onclick="showTab('tab4',this)">4 - Framing</button>
+    <button class="tab-btn" onclick="showTab('tab5',this)">5 - SEND</button>
+    <button class="tab-btn" onclick="showTab('tab6',this)">6 - Progression</button>
+    <button class="tab-btn" onclick="showTab('tab7',this)">7 - Teacher Skills</button>
+    <button class="tab-btn" onclick="showTab('tab8',this)">8 - Digital Leads</button>
   </div>
 
-  <!-- TAB 1: General Skills (from JSON) -->
   <div class="tab-content active" id="tab1"></div>
-
-  <!-- TAB 2: All Subjects (editable) -->
   <div class="tab-content" id="tab2">
     <div class="edit-header">
-      <h2 class="section-title">All Subjects &amp; Curriculum Areas</h2>
-      <button class="unlock-btn" onclick="unlockTab('tab2')">🔓 Unlock Editing</button>
+      <h2 class="section-title">All Subjects & Curriculum Areas</h2>
+      <button class="unlock-btn" onclick="unlockTab('tab2')">Unlock Editing</button>
     </div>
     <div class="status-message" id="status-tab2"></div>
-    <p class="section-intro">Tabs 2, 3, 5, 8 are editable with passcode 2402. Coming soon: full curriculum area edit forms.</p>
+    <p class="section-intro">This section contains mappings for all curriculum areas. Coming soon: full editing interface.</p>
   </div>
 
-  <!-- TAB 3: Industry Skills (editable) -->
   <div class="tab-content" id="tab3">
     <div class="edit-header">
       <h2 class="section-title">Industry-Specific Digital Skills</h2>
-      <button class="unlock-btn" onclick="unlockTab('tab3')">🔓 Unlock Editing</button>
+      <button class="unlock-btn" onclick="unlockTab('tab3')">Unlock Editing</button>
     </div>
     <div class="status-message" id="status-tab3"></div>
-    <p class="section-intro">This tab is editable. Coming soon: industry skills edit forms.</p>
+    <p class="section-intro">Industry-specific skills mapping. Coming soon: full editing interface.</p>
   </div>
 
-  <!-- TAB 4: Framing (from JSON) -->
   <div class="tab-content" id="tab4"></div>
 
-  <!-- TAB 5: SEND (editable) -->
   <div class="tab-content" id="tab5">
     <div class="edit-header">
-      <h2 class="section-title">SEND, Inclusion &amp; Accessibility</h2>
-      <button class="unlock-btn" onclick="unlockTab('tab5')">🔓 Unlock Editing</button>
+      <h2 class="section-title">SEND, Inclusion & Accessibility</h2>
+      <button class="unlock-btn" onclick="unlockTab('tab5')">Unlock Editing</button>
     </div>
     <div class="status-message" id="status-tab5"></div>
-    <p class="section-intro">This tab is editable. Coming soon: SEND provisions edit forms.</p>
+    <p class="section-intro">Accessibility and inclusion provisions. Coming soon: full editing interface.</p>
   </div>
 
-  <!-- TAB 6: Progression (from JSON) -->
   <div class="tab-content" id="tab6"></div>
-
-  <!-- TAB 7: Teacher Skills (from JSON) -->
   <div class="tab-content" id="tab7"></div>
 
-  <!-- TAB 8: Digital Leads (editable) -->
   <div class="tab-content" id="tab8">
     <div class="edit-header">
       <h2 class="section-title">Digital Leads by Area</h2>
-      <button class="unlock-btn" onclick="unlockTab('tab8')">🔓 Unlock Editing</button>
+      <button class="unlock-btn" onclick="unlockTab('tab8')">Unlock Editing</button>
     </div>
     <div class="status-message" id="status-tab8"></div>
     <div id="digital-leads-table"></div>
@@ -208,7 +221,7 @@
 <div class="modal" id="passcodeModal">
   <div class="modal-content">
     <div class="modal-title">Unlock Editing</div>
-    <p style="font-size:13px; color:var(--text-mid); margin-bottom:16px;">Enter the 4-digit passcode to edit this section.</p>
+    <p style="font-size:13px; color:var(--text-mid); margin-bottom:16px;">Enter the passcode to edit this section.</p>
     <input type="password" id="passcodeInput" class="modal-input" placeholder="••••" maxlength="4" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
     <div class="modal-buttons">
       <button class="modal-btn submit" onclick="validatePasscode()">Unlock</button>
@@ -220,7 +233,6 @@
 
 <script>
   const CORRECT_PASSCODE = '2402';
-  const DATA_URL = 'https://raw.githubusercontent.com/GWC25/Digital-Skills-Framework---Weston/main/areas-data-full.json';
   let data = null;
   let isUnlocked = { tab2: false, tab3: false, tab5: false, tab8: false };
   let currentTab = null;
@@ -233,28 +245,23 @@
 
   async function loadData() {
     try {
-      const response = await fetch(DATA_URL);
+      const response = await fetch('areas-data.json');
+      if (!response.ok) {
+        throw new Error('Failed to load data: ' + response.status);
+      }
       data = await response.json();
-      console.log('Data loaded:', data);
+      console.log('Data loaded successfully');
     } catch (error) {
       console.error('Error loading data:', error);
-      document.getElementById('tab1').innerHTML = '<p style="color: red;">Error loading framework data.</p>';
+      document.getElementById('tab1').innerHTML = '<div style="padding:40px; color:var(--navy); background:rgba(192,50,50,.1); border-radius:8px; border-left:4px solid #c03232;"><strong>Unable to load framework data.</strong><p style="margin-top:8px; font-size:13px;">Ensure areas-data.json is in the same folder as this file.</p></div>';
     }
   }
 
   function renderStaticTabs() {
     if (!data) return;
-
-    // Tab 1: General Skills
     renderTab1();
-
-    // Tab 4: Framing
     renderTab4();
-
-    // Tab 6: Progression
     renderTab6();
-
-    // Tab 7: Teacher Skills
     renderTab7();
   }
 
@@ -312,7 +319,7 @@
     tab4.frames.forEach(frame => {
       html += `
         <div class="framing-card">
-          <div class="framing-sub">Framing Approach ${frame.number}</div>
+          <div class="framing-sub">Approach ${frame.number}</div>
           <h3>${frame.title}</h3>
           <p>${frame.description}</p>
           <div class="framing-example">${frame.example.replace(/\n/g, '<br>')}</div>
@@ -332,19 +339,18 @@
       <p class="section-intro">${tab6.intro}</p>
     `;
 
-    // Render progression ladders (simplified for space)
     const ladder = tab6.ladders[0];
-    html += `<h3 style="font-size:20px; margin-top:30px; margin-bottom:20px;">${ladder.name}</h3>`;
+    html += `<h3 style="font-size:20px; margin-top:30px; margin-bottom:20px; color:var(--navy);">${ladder.name}</h3>`;
 
     ladder.levels.forEach(level => {
       html += `
         <div style="margin-bottom:20px; padding:15px; background:var(--white); border-radius:8px; border-left:4px solid var(--teal);">
-          <h4 style="font-weight:700; margin-bottom:10px; text-transform:uppercase; font-size:12px;">${level.level}</h4>
+          <h4 style="font-weight:700; margin-bottom:10px; text-transform:uppercase; font-size:12px; color:var(--navy);">${level.level}</h4>
       `;
       level.skills.forEach(skill => {
         html += `
           <div style="margin-bottom:10px;">
-            <strong style="font-size:13px;">${skill.title}</strong><br>
+            <strong style="font-size:13px; color:var(--navy);">${skill.title}</strong><br>
             <span style="font-size:12px; color:var(--text-mid);">${skill.description}</span>
           </div>
         `;
@@ -366,8 +372,8 @@
     tab7.stages.forEach(stage => {
       html += `
         <div style="margin-bottom:30px; padding:20px; background:var(--white); border-radius:8px; border-left:4px solid var(--teal); box-shadow:0 2px 8px rgba(0,0,0,.05);">
-          <h3 style="font-size:18px; margin-bottom:5px;">Stage ${stage.stageNumber}: ${stage.stageName}</h3>
-          <p style="font-size:12px; color:var(--text-light); margin-bottom:15px;"><strong>Level:</strong> ${stage.digcompLevel}</p>
+          <h3 style="font-size:18px; margin-bottom:5px; color:var(--navy);">Stage ${stage.stageNumber}: ${stage.stageName}</h3>
+          <p style="font-size:12px; color:var(--text-light); margin-bottom:15px;"><strong style="color:var(--navy);">Level:</strong> ${stage.digcompLevel}</p>
       `;
       stage.skills.forEach(skill => {
         html += `
@@ -388,7 +394,7 @@
     const container = document.getElementById('digital-leads-table');
     if (!data || !data.digitalLeads) return;
 
-    let html = '<table style="width:100%; border-collapse:collapse; background:var(--white); border-radius:8px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,.05);"><thead><tr style="background:var(--navy);"><th style="padding:12px; text-align:left; color:rgba(255,255,255,.7); font-family:\'DM Mono\',monospace; font-size:9px; letter-spacing:.15em; text-transform:uppercase;">Area Code</th><th style="padding:12px; text-align:left; color:rgba(255,255,255,.7); font-family:\'DM Mono\',monospace; font-size:9px; letter-spacing:.15em; text-transform:uppercase;">Area Name</th><th style="padding:12px; text-align:left; color:rgba(255,255,255,.7); font-family:\'DM Mono\',monospace; font-size:9px; letter-spacing:.15em; text-transform:uppercase;">Head of Area</th><th style="padding:12px; text-align:left; color:rgba(255,255,255,.7); font-family:\'DM Mono\',monospace; font-size:9px; letter-spacing:.15em; text-transform:uppercase;">Digital Lead</th><th style="padding:12px; text-align:left; color:rgba(255,255,255,.7); font-family:\'DM Mono\',monospace; font-size:9px; letter-spacing:.15em; text-transform:uppercase;">Action</th></tr></thead><tbody>';
+    let html = '<table style="width:100%; border-collapse:collapse; background:var(--white); border-radius:8px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,.05);"><thead><tr style="background:var(--navy);"><th style="padding:12px; text-align:left; color:var(--white); opacity:0.9; font-family:\'DM Mono\',monospace; font-size:9px; letter-spacing:.15em; text-transform:uppercase;">Area Code</th><th style="padding:12px; text-align:left; color:var(--white); opacity:0.9; font-family:\'DM Mono\',monospace; font-size:9px; letter-spacing:.15em; text-transform:uppercase;">Area Name</th><th style="padding:12px; text-align:left; color:var(--white); opacity:0.9; font-family:\'DM Mono\',monospace; font-size:9px; letter-spacing:.15em; text-transform:uppercase;">Head of Area</th><th style="padding:12px; text-align:left; color:var(--white); opacity:0.9; font-family:\'DM Mono\',monospace; font-size:9px; letter-spacing:.15em; text-transform:uppercase;">Digital Lead</th><th style="padding:12px; text-align:left; color:var(--white); opacity:0.9; font-family:\'DM Mono\',monospace; font-size:9px; letter-spacing:.15em; text-transform:uppercase;">Action</th></tr></thead><tbody>';
 
     data.digitalLeads.forEach(area => {
       html += `<tr style="border-bottom:1px solid var(--grey-light);">
@@ -396,7 +402,7 @@
         <td style="padding:12px; color:var(--text-mid);">${area.name}</td>
         <td style="padding:12px; color:var(--text-mid);">${area.headOfArea}</td>
         <td style="padding:12px; color:var(--text-mid);">${area.digitalLead}</td>
-        <td style="padding:12px;">${isUnlocked.tab8 ? `<button style="background:none; border:none; color:var(--teal); cursor:pointer; font-size:14px;" onclick="editDigitalLead('${area.code}')">✎ Edit</button>` : 'View'}</td>
+        <td style="padding:12px;">${isUnlocked.tab8 ? `<button style="background:none; border:none; color:var(--teal); cursor:pointer; font-size:14px;" onclick="editDigitalLead('${area.code}')">Edit</button>` : 'View'}</td>
       </tr>`;
     });
 
@@ -439,7 +445,7 @@
       closePasscodeModal();
       document.querySelector(`#${currentTab} .unlock-btn`).style.display = 'none';
       if (currentTab === 'tab8') initializeTab8();
-      showStatus(currentTab, '✓ Editing unlocked.', 'success');
+      showStatus(currentTab, 'Editing unlocked', 'success');
     } else {
       document.getElementById('passcodeError').textContent = 'Incorrect passcode.';
       document.getElementById('passcodeInput').value = '';
@@ -460,7 +466,7 @@
     area.headOfArea = hoaInput;
     area.digitalLead = dlInput;
     initializeTab8();
-    showStatus('tab8', '✓ Updated (ready to sync to GitHub)', 'success');
+    showStatus('tab8', 'Updated successfully', 'success');
   }
 
   function showStatus(tabId, msg, type) {
