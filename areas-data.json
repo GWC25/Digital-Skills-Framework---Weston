@@ -1,13 +1,13 @@
 {
   "version": "3.1",
   "lastUpdated": "2026-04-28T00:00:00Z",
-  "title": "Digital Skills Framework — Weston College (Full Curriculum Edition)",
+  "title": "Digital Skills Framework - Weston College (Full Curriculum Edition)",
   
   "tab1_generalSkills": {
     "eyebrow": "Tab 01 of 08",
     "title": "General Digital Skills",
-    "intro": "Drawn from the DfE Essential Digital Skills Framework and the FutureDotNow AI-updated EDS (2025), these skills are organised across three contexts: learning, work, and societal inclusion. The five core EDS categories — Communicating, Handling Information & Content, Transacting, Problem Solving, and Being Safe & Legal Online — cut across all three contexts.",
-    "infoBox": "Why this matters at Weston College: The EIF Toolkit explicitly states that learners must develop \"the digital skills needed to study curriculum and learning goals.\" These 15 foundational skills represent the floor — the minimum every learner should reach regardless of their programme.",
+    "intro": "Drawn from the DfE Essential Digital Skills Framework and the FutureDotNow AI-updated EDS (2025), these skills are organised across three contexts: learning, work, and societal inclusion. The five core EDS categories - Communicating, Handling Information & Content, Transacting, Problem Solving, and Being Safe & Legal Online - cut across all three contexts.",
+    "infoBox": "Why this matters at Weston College: The EIF Toolkit explicitly states that learners must develop \"the digital skills needed to study curriculum and learning goals.\" These 15 foundational skills represent the floor - the minimum every learner should reach regardless of their programme.",
     "columns": [
       {
         "title": "For Learning",
@@ -110,7 +110,7 @@
         "description": "Government · 5 core categories · Life & Work standards"
       },
       {
-        "title": "FutureDotNow — AI-Updated EDS Framework 2025",
+        "title": "FutureDotNow - AI-Updated EDS Framework 2025",
         "url": "https://futuredotnow.uk/about-us/the-essential-digital-skills-framework/",
         "description": "Adds AI literacy, prompt engineering & ethical AI use"
       },
@@ -120,7 +120,7 @@
         "description": "Annual tracking of UK workforce digital capability"
       },
       {
-        "title": "Good Things Foundation — Basic Digital Skills Briefing",
+        "title": "Good Things Foundation - Basic Digital Skills Briefing",
         "url": "https://www.goodthingsfoundation.org/policy-and-research/what-works-colab/basic-digital-skills-briefing",
         "description": "Inclusion, exclusion gaps, community-level context"
       }
@@ -136,13 +136,13 @@
       {
         "number": "1",
         "title": "The Industry Standard Frame",
-        "description": "Frame digital skills as standard professional practice — not technology training, but what every employer expects on day one.",
-        "example": "Construction: \"Every major contractor uses digital clock-in. You won't get paid if you can't sign in on site digitally.\"\nEngineering: \"EV diagnostics are entirely digital — you can't fix a modern vehicle without a tablet.\""
+        "description": "Frame digital skills as standard professional practice - not technology training, but what every employer expects on day one.",
+        "example": "Construction: \"Every major contractor uses digital clock-in. You won't get paid if you can't sign in on site digitally.\"\nEngineering: \"EV diagnostics are entirely digital - you can't fix a modern vehicle without a tablet.\""
       },
       {
         "number": "2",
         "title": "The Time-Saving Frame",
-        "description": "Frame digital tools as reducing admin burden for tasks learners will have to do anyway — invoicing, booking, recording, communicating.",
+        "description": "Frame digital tools as reducing admin burden for tasks learners will have to do anyway - invoicing, booking, recording, communicating.",
         "example": "Hair & Beauty: \"Fresha sends reminders automatically and takes deposits. You spend less time chasing no-shows.\"\nHealth & Care: \"Electronic records mean you don't rewrite the same patient information by hand three times a shift.\""
       },
       {
@@ -154,16 +154,16 @@
       {
         "number": "4",
         "title": "The Authentic Context Frame",
-        "description": "Teach digital skills inside real vocational tasks rather than as separate lessons. The digital skill becomes invisible — the learner is just doing their job.",
-        "example": "Construction: \"Measure this wall, log the data, and email it to the project manager.\" — learner has just done data entry, file handling, and email in one task.\nESol: \"Book a GP appointment on the NHS app.\" — learner is navigating a real digital service, not a classroom simulation."
+        "description": "Teach digital skills inside real vocational tasks rather than as separate lessons. The digital skill becomes invisible - the learner is just doing their job.",
+        "example": "Construction: \"Measure this wall, log the data, and email it to the project manager.\" - learner has just done data entry, file handling, and email in one task.\nESol: \"Book a GP appointment on the NHS app.\" - learner is navigating a real digital service, not a classroom simulation."
       }
     ]
   },
 
   "tab6_progression": {
     "eyebrow": "Tab 06 of 08",
-    "title": "Digital Skills Progression — Basic to Advanced",
-    "intro": "Two parallel ladders showing progression from absolute beginner to highly advanced — one for General Digital Skills (applicable to all citizens and learners) and one for IT & Computing Skills specific to FE & HE contexts. Both are structured using the DigComp 3.0 proficiency levels (European Commission, November 2025).",
+    "title": "Digital Skills Progression - Basic to Advanced",
+    "intro": "Two parallel ladders showing progression from absolute beginner to highly advanced - one for General Digital Skills (applicable to all citizens and learners) and one for IT & Computing Skills specific to FE & HE contexts. Both are structured using the DigComp 3.0 proficiency levels (European Commission, November 2025).",
     "ladders": [
       {
         "name": "General Digital Skills",
@@ -194,7 +194,7 @@
             "level": "Basic",
             "skills": [
               {
-                "title": "Email — composing, replying, attaching",
+                "title": "Email - composing, replying, attaching",
                 "description": "Can write, send, reply and forward emails. Can attach a document. Knows not to open suspicious attachments."
               },
               {
@@ -227,7 +227,7 @@
                 "description": "Joins and hosts video calls (Teams, Zoom). Uses shared documents simultaneously with others. Manages files across folders and cloud storage independently."
               },
               {
-                "title": "Online safety — active practice",
+                "title": "Online safety - active practice",
                 "description": "Uses unique strong passwords and a password manager. Recognises phishing emails. Enables two-factor authentication."
               },
               {
@@ -257,14 +257,14 @@
               },
               {
                 "title": "AI as a working tool",
-                "description": "Uses AI strategically to accelerate work — writing, research, summarising, coding. Evaluates AI outputs critically."
+                "description": "Uses AI strategically to accelerate work - writing, research, summarising, coding. Evaluates AI outputs critically."
               },
               {
                 "title": "Digital communication strategy",
                 "description": "Manages professional digital presence (LinkedIn). Uses digital channels strategically for audience-appropriate communication."
               },
               {
-                "title": "Cybersecurity — personal and organisational",
+                "title": "Cybersecurity - personal and organisational",
                 "description": "Understands GDPR obligations. Recognises social engineering attacks. Manages security settings across devices and platforms."
               }
             ]
@@ -286,7 +286,7 @@
               },
               {
                 "title": "Digital rights, ethics and advocacy",
-                "description": "Understands societal implications of digital technology — algorithmic bias, data sovereignty, digital rights."
+                "description": "Understands societal implications of digital technology - algorithmic bias, data sovereignty, digital rights."
               }
             ]
           }
@@ -298,7 +298,7 @@
   "tab7_teacherSkills": {
     "eyebrow": "Tab 07 of 08",
     "title": "Teacher Digital Skills (TLA-Focused Progression)",
-    "intro": "A structured progression framework for FE & HE teaching staff — from first engaging with technology in the classroom to leading digital innovation across the college.",
+    "intro": "A structured progression framework for FE & HE teaching staff - from first engaging with technology in the classroom to leading digital innovation across the college.",
     "stages": [
       {
         "stageNumber": 1,
@@ -340,7 +340,7 @@
       },
       {
         "stageNumber": "2A",
-        "stageName": "Adopting — Developing Digital Practice",
+        "stageName": "Adopting - Developing Digital Practice",
         "digcompLevel": "DigCompEdu B1 (Integrator)",
         "audience": "Staff with 1–2 years experience · Those completing or post-ITE",
         "skills": [
@@ -360,13 +360,13 @@
             "number": "2.3",
             "name": "Formative digital assessment",
             "area": "Assessment",
-            "description": "Uses digital tools for formative assessment — Microsoft Forms quizzes, Mentimeter, Kahoot, or Padlet for checking understanding within lessons."
+            "description": "Uses digital tools for formative assessment - Microsoft Forms quizzes, Mentimeter, Kahoot, or Padlet for checking understanding within lessons."
           },
           {
             "number": "2.4",
             "name": "Creating accessible digital resources",
             "area": "Accessibility & Inclusion",
-            "description": "Applies accessibility principles to all digital materials — readable fonts, sufficient colour contrast, alt-text on images, headings in Word documents. Uses Microsoft Office's Accessibility Checker."
+            "description": "Applies accessibility principles to all digital materials - readable fonts, sufficient colour contrast, alt-text on images, headings in Word documents. Uses Microsoft Office's Accessibility Checker."
           },
           {
             "number": "2.5",
@@ -384,7 +384,7 @@
       },
       {
         "stageNumber": "2B",
-        "stageName": "Adopting — Embedding & Expanding",
+        "stageName": "Adopting - Embedding & Expanding",
         "digcompLevel": "DigCompEdu B2 (Expert)",
         "audience": "Confident practitioners · Those seeking ATS status · Staff mentoring newer colleagues",
         "skills": [
@@ -392,13 +392,13 @@
             "number": "2B.1",
             "name": "Technology-enhanced active learning design",
             "area": "Pedagogical Innovation",
-            "description": "Designs lesson sequences where digital tools purposefully change the learning experience — enabling collaboration, problem-solving, or creative production. Applies frameworks like 21CLD or UDL."
+            "description": "Designs lesson sequences where digital tools purposefully change the learning experience - enabling collaboration, problem-solving, or creative production. Applies frameworks like 21CLD or UDL."
           },
           {
             "number": "2B.2",
             "name": "Digital differentiation",
             "area": "Learner Support",
-            "description": "Uses digital tools to personalise learning at scale — adaptive quiz tools, choice boards created digitally, differentiated resources shared via the VLE for different ability groups."
+            "description": "Uses digital tools to personalise learning at scale - adaptive quiz tools, choice boards created digitally, differentiated resources shared via the VLE for different ability groups."
           },
           {
             "number": "2B.3",
@@ -422,7 +422,7 @@
             "number": "2B.6",
             "name": "Building learners' digital skills in subject context",
             "area": "Learner Digital Empowerment",
-            "description": "Deliberately plans for learners to develop digital skills within the subject — not as a bolt-on, but embedded in vocational tasks. Maps which EDS framework categories their learners are developing."
+            "description": "Deliberately plans for learners to develop digital skills within the subject - not as a bolt-on, but embedded in vocational tasks. Maps which EDS framework categories their learners are developing."
           }
         ]
       },
@@ -436,7 +436,7 @@
             "number": "3.1",
             "name": "Mentoring and coaching digital practice",
             "area": "Professional Leadership",
-            "description": "Supports and coaches colleagues on digital tools and pedagogy — not just demonstrating but modelling reflective practice. Identifies where a colleague is on the DTPF progression and tailors coaching."
+            "description": "Supports and coaches colleagues on digital tools and pedagogy - not just demonstrating but modelling reflective practice. Identifies where a colleague is on the DTPF progression and tailors coaching."
           },
           {
             "number": "3.2",
@@ -448,19 +448,19 @@
             "number": "3.3",
             "name": "Critical evaluation and adoption of EdTech",
             "area": "Strategic Digital Leadership",
-            "description": "Evaluates new educational technology critically — pedagogical rationale, accessibility compliance, data privacy (GDPR), cost, and sustainability. Makes evidence-based recommendations on EdTech adoption."
+            "description": "Evaluates new educational technology critically - pedagogical rationale, accessibility compliance, data privacy (GDPR), cost, and sustainability. Makes evidence-based recommendations on EdTech adoption."
           },
           {
             "number": "3.4",
             "name": "AI pedagogy leadership",
             "area": "AI in Education",
-            "description": "Leads the team's thinking on AI in teaching and assessment — drafts or contributes to the area's AI policy, models ethical AI use, supports colleagues in navigating the AI landscape."
+            "description": "Leads the team's thinking on AI in teaching and assessment - drafts or contributes to the area's AI policy, models ethical AI use, supports colleagues in navigating the AI landscape."
           },
           {
             "number": "3.5",
             "name": "Digital research and innovation in practice",
             "area": "Scholarship & Innovation",
-            "description": "Conducts or participates in action research into digital pedagogy. Writes up or presents findings — in team meetings, at sector CPD events, or via publication."
+            "description": "Conducts or participates in action research into digital pedagogy. Writes up or presents findings - in team meetings, at sector CPD events, or via publication."
           },
           {
             "number": "3.6",
